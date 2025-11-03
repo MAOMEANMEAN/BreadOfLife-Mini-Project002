@@ -29,27 +29,27 @@
             <div
               class="bg-stone-100/50 backdrop-blur-sm shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl px-4 py-1"
             >
-              <div class="flex items-center justify-between">
+              <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
                 <!-- Logo -->
                 <div class="flex items-center gap-3">
                   <img
                     src="logo/logo.png"
                     alt="BreadOfLife-logo"
-                    class="h-16 w-16 object-contain"
+                    class="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 object-contain"
                   />
-                  <h1 class="text-2xl font-bold font-serif text-amber-900">
+                  <h1 class="text-xl sm:text-2xl md:text-3xl font-bold font-serif text-amber-900">
                     BreadOfLife-Backery
                   </h1>
                 </div>
 
                 <!-- Search and Icons -->
-                <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-2 sm:space-x-4 flex-wrap justify-center">
                   <!-- Search Bar -->
-                  <div class="relative">
+                  <div class="relative w-full sm:w-auto">
                     <input
                       type="text"
                       placeholder="Search"
-                      class="pl-13 pr-4 py-2 border border-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-900 bg-white/80 w-64 rounded-lg text-lg"
+                      class="pl-13 pr-4 py-2 border border-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-900 bg-white/80 w-full sm:w-48 md:w-64 rounded-lg text-base sm:text-lg"
                     />
                     <svg
                       class="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
@@ -106,12 +106,19 @@
         </div>
         <!-- navbar -->
         <nav class="bg-orange-100">
-          <div class="container mx-auto px-6">
-            <ul class="flex items-center justify-center space-x-12 py-4">
+          <div class="container mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between lg:hidden py-4">
+              <button class="text-amber-900 hover:text-red-700" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+              </button>
+            </div>
+            <ul class="hidden lg:flex flex-col lg:flex-row items-center justify-center lg:space-x-12 py-4 space-y-4 lg:space-y-0" id="nav-menu">
               <li>
                 <a
                   href="index.html"
-                  class="text-amber-900 hover:text-red-700 transition font-semibold text-lg"
+                  class="block text-amber-900 hover:text-red-700 transition font-semibold text-base sm:text-lg"
                   >Home</a
                 >
               </li>
@@ -186,32 +193,32 @@
     <main class="container mx-auto px-6 py-8">
       <!-- banner -->
       <div
-        class="w-[1200px] h-[400px] bg-rose-200/50 m-auto flex justify-between text-center items-center rounded-xl mt-[100px]"
+        class="w-full max-w-[1200px] bg-rose-200/50 mx-auto flex flex-col lg:flex-row justify-between text-center items-center rounded-xl mt-8 sm:mt-12 lg:mt-[100px] px-4 py-8 sm:py-12"
       >
         <img
-          class="w-[400px]"
+          class="w-[180px] sm:w-[250px] lg:w-[400px] hidden sm:block"
           src="images/coffee-banner-homepage.png"
           alt="coffee banner"
         />
-        <h1 class="text-[75px] text-amber-800 font-serif font-bold">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-[75px] text-amber-800 font-serif font-bold my-6 lg:my-0">
           You're Welcome
         </h1>
         <img
-          class="w-[400px]"
+          class="w-[180px] sm:w-[250px] lg:w-[400px] hidden sm:block"
           src="images/bread-banner-homepage.png"
-          alt="coffee banner"
+          alt="bread banner"
         />
       </div>
       <h1
-        class="text-[50px] text-amber-800 font-serif font-bold p-20 text-center"
+        class="text-3xl sm:text-4xl md:text-5xl text-amber-800 font-serif font-bold p-6 sm:p-10 md:p-20 text-center"
       >
-        What do yo want to eat?
+        What do you want to eat?
       </h1>
       <!-- cart product -->
       <!-- bread -->
       <!-- Breads Section -->
       <section class="mb-16">
-        <div class="max-w-[1080px] mx-auto">
+        <div class="container max-w-[1440px] mx-auto px-4">
           <div class="flex justify-between items-center mb-6">
             <h2 class="text-3xl font-serif text-amber-900">Breads</h2>
             <a
@@ -221,115 +228,112 @@
             >
           </div>
           <div class="flex justify-center">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 w-full">
               <!-- White Bread -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition"
               >
-                <img
-                  src="bread-section/white bread.png"
-                  alt="White Bread"
-                  class="w-60 h-60 object-cover p-2"
+                <div class="aspect-square mb-4">
+                  <img
+                    src="bread-section/white bread.png"
+                    alt="White Bread"
+                    class="w-full h-full object-cover rounded-lg"
                 />
+                </div>
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center"
                 >
                   White Bread
                 </h3>
-                <div class="flex justify-between items-center">
-                  <span class="text-red-500 font-semibold text-xl pt-5"
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
+                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
                     >2.5$</span
                   >
-                  <div class="btn-card pt-5">
-                    <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
-                    >
-                      Add to cart
-                    </button>
-                  </div>
+                  <button
+                    class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
+                  >
+                    Add to cart
+                  </button>
                 </div>
               </div>
 
               <!-- Wheat Bread -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition"
               >
-                <img
-                  src="bread-section/whole wheat bread.png"
-                  alt="Wheat Bread"
-                  class="w-60 h-60 object-cover p-2"
-                />
+                <div class="aspect-square mb-4">
+                  <img
+                    src="bread-section/whole wheat bread.png"
+                    alt="Wheat Bread"
+                    class="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center"
                 >
                   Wheat Bread
                 </h3>
-                <div class="flex justify-between items-center">
-                  <span class="text-red-500 font-semibold text-xl pt-5"
-                    >3$</span
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
+                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >3$</span>
+                  <button
+                    class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
-                  <div class="btn-card pt-5">
-                    <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
-                    >
-                      Add to cart
-                    </button>
-                  </div>
+                    Add to cart
+                  </button>
                 </div>
               </div>
               <!-- Butter Croissant -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition"
               >
-                <img
-                  src="bread-section/classic butter croosaint.png"
-                  alt="Butter Croissant"
-                  class="w-60 h-60 object-cover p-2"
-                />
+                <div class="aspect-square mb-4">
+                  <img
+                    src="bread-section/classic butter croosaint.png"
+                    alt="Butter Croissant"
+                    class="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center"
                 >
                   Butter Croissant
                 </h3>
-                <div class="flex justify-between items-center">
-                  <span class="text-red-500 font-semibold text-xl pt-5"
-                    >4.5$</span
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
+                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >4.5$</span>
+                  <button
+                    class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
-                  <div class="btn-card pt-5">
-                    <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
-                    >
-                      Add to cart
-                    </button>
-                  </div>
+                    Add to cart
+                  </button>
                 </div>
               </div>
 
               <!-- Multigrain Bread -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition"
               >
-                <img
-                  src="bread-section/multigrain bread.png"
-                  alt="Multigrain Bread"
-                  class="w-60 h-60 object-cover p-2"
-                />
+                <div class="aspect-square mb-4">
+                  <img
+                    src="bread-section/multigrain bread.png"
+                    alt="Multigrain Bread"
+                    class="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center"
                 >
                   Multigrain Bread
                 </h3>
-                <div class="flex justify-between items-center">
-                  <span class="text-red-500 font-semibold text-xl pt-5"
-                    >3.5$</span
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
+                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >3.5$</span>
+                  <button
+                    class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
-                  <div class="btn-card pt-5">
-                    <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
-                    >
-                      Add to cart
-                    </button>
-                  </div>
+                    Add to cart
+                  </button>
                 </div>
               </div>
             </div>
@@ -339,7 +343,7 @@
 
       <!-- Cakes Section -->
       <section class="mb-16">
-        <div class="max-w-[1080px] mx-auto">
+        <div class="container max-w-[1440px] mx-auto px-4">
           <div class="flex justify-between items-center mb-6">
             <h2 class="text-3xl font-serif text-amber-900">Cakes</h2>
             <a
@@ -349,115 +353,111 @@
             >
           </div>
           <div class="flex justify-center">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 w-full">
               <!-- Pound Cake -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition"
               >
-                <img
-                  src="cake-section/pound cake.png"
-                  alt="Pound Cake"
-                  class="w-60 h-60 object-cover p-2"
-                />
+                <div class="aspect-square mb-4">
+                  <img
+                    src="cake-section/pound cake.png"
+                    alt="Pound Cake"
+                    class="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center"
                 >
                   Pound Cake
                 </h3>
-                <div class="flex justify-between items-center">
-                  <span class="text-red-500 font-semibold text-xl pt-5"
-                    >12$</span
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
+                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >12$</span>
+                  <button
+                    class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
-                  <div class="btn-card pt-5">
-                    <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
-                    >
-                      Add to cart
-                    </button>
-                  </div>
+                    Add to cart
+                  </button>
                 </div>
               </div>
               <!-- Red Velvet Cake -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition"
               >
-                <img
-                  src="cake-section/red velvet cake.png"
-                  alt="Red Velvet Cake"
-                  class="w-60 h-60 object-cover p-2"
-                />
+                <div class="aspect-square mb-4">
+                  <img
+                    src="cake-section/red velvet cake.png"
+                    alt="Red Velvet Cake"
+                    class="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center"
                 >
                   Red Velvet Cake
                 </h3>
-                <div class="flex justify-between items-center">
-                  <span class="text-red-500 font-semibold text-xl pt-5"
-                    >15$</span
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
+                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >15$</span>
+                  <button
+                    class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
-                  <div class="btn-card pt-5">
-                    <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
-                    >
-                      Add to cart
-                    </button>
-                  </div>
+                    Add to cart
+                  </button>
                 </div>
               </div>
 
               <!-- Carrot Cake -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition"
               >
-                <img
-                  src="cake-section/carrot cake.png"
-                  alt="Carrot Cake"
-                  class="w-60 h-60 object-cover p-2"
-                />
+                <div class="aspect-square mb-4">
+                  <img
+                    src="cake-section/carrot cake.png"
+                    alt="Carrot Cake"
+                    class="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center"
                 >
                   Carrot Cake
                 </h3>
-                <div class="flex justify-between items-center">
-                  <span class="text-red-500 font-semibold text-xl pt-5"
-                    >14$</span
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
+                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >14$</span>
+                  <button
+                    class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
-                  <div class="btn-card pt-5">
-                    <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
-                    >
-                      Add to cart
-                    </button>
-                  </div>
+                    Add to cart
+                  </button>
                 </div>
               </div>
 
               <!-- Vanilla Cake -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition"
               >
-                <img
-                  src="cake-section/vanilla cake.png"
-                  alt="Vanilla Cake"
-                  class="w-60 h-60 object-cover p-2"
-                />
+                <div class="aspect-square mb-4">
+                  <img
+                    src="cake-section/vanilla cake.png"
+                    alt="Vanilla Cake"
+                    class="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center"
                 >
                   Vanilla Cake
                 </h3>
-                <div class="flex justify-between items-center">
-                  <span class="text-red-500 font-semibold text-xl pt-5"
-                    >13$</span
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
+                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >13$</span>
+                  <button
+                    class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
-                  <div class="btn-card pt-5">
-                    <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
-                    >
-                      Add to cart
-                    </button>
-                  </div>
+                    Add to cart
+                  </button>
                 </div>
               </div>
             </div>
@@ -466,7 +466,7 @@
       </section>
       <!-- Drinks Section -->
       <section class="mb-16">
-        <div class="max-w-[1080px] mx-auto">
+        <div class="container max-w-[1440px] mx-auto px-4">
           <div class="flex justify-between items-center mb-6">
             <h2 class="text-3xl font-serif text-amber-900">Drinks</h2>
             <a
@@ -476,115 +476,111 @@
             >
           </div>
           <div class="flex justify-center">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 w-full">
               <!-- Espresso -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition"
               >
-                <img
-                  src="drink-section/espresso.png"
-                  alt="Espresso"
-                  class="w-60 h-60 object-cover p-2"
-                />
+                <div class="aspect-square mb-4">
+                  <img
+                    src="drink-section/espresso.png"
+                    alt="Espresso"
+                    class="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center"
                 >
                   Espresso
                 </h3>
-                <div class="flex justify-between items-center">
-                  <span class="text-red-500 font-semibold text-xl pt-5"
-                    >3$</span
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
+                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >3$</span>
+                  <button
+                    class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
-                  <div class="btn-card pt-5">
-                    <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
-                    >
-                      Add to cart
-                    </button>
-                  </div>
+                    Add to cart
+                  </button>
                 </div>
               </div>
 
               <!-- Americano -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition"
               >
-                <img
-                  src="drink-section/americano.png"
-                  alt="Americano"
-                  class="w-60 h-60 object-cover p-2"
-                />
+                <div class="aspect-square mb-4">
+                  <img
+                    src="drink-section/americano.png"
+                    alt="Americano"
+                    class="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center"
                 >
                   Americano
                 </h3>
-                <div class="flex justify-between items-center">
-                  <span class="text-red-500 font-semibold text-xl pt-5"
-                    >3.5$</span
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
+                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >3.5$</span>
+                  <button
+                    class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
-                  <div class="btn-card pt-5">
-                    <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
-                    >
-                      Add to cart
-                    </button>
-                  </div>
+                    Add to cart
+                  </button>
                 </div>
               </div>
 
               <!-- Matcha Latte -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition"
               >
-                <img
-                  src="drink-section/matcha latte.png"
-                  alt="Matcha Latte"
-                  class="w-60 h-60 object-cover p-2"
-                />
+                <div class="aspect-square mb-4">
+                  <img
+                    src="drink-section/matcha latte.png"
+                    alt="Matcha Latte"
+                    class="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center"
                 >
                   Matcha Latte
                 </h3>
-                <div class="flex justify-between items-center">
-                  <span class="text-red-500 font-semibold text-xl pt-5"
-                    >4.5$</span
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
+                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >4.5$</span>
+                  <button
+                    class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
-                  <div class="btn-card pt-5">
-                    <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
-                    >
-                      Add to cart
-                    </button>
-                  </div>
+                    Add to cart
+                  </button>
                 </div>
               </div>
               <!-- Latte -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition"
               >
-                <img
-                  src="drink-section/latte.png"
-                  alt="Latte"
-                  class="w-60 h-60 object-cover p-2"
-                />
+                <div class="aspect-square mb-4">
+                  <img
+                    src="drink-section/latte.png"
+                    alt="Latte"
+                    class="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center"
                 >
                   Latte
                 </h3>
-                <div class="flex justify-between items-center">
-                  <span class="text-red-500 font-semibold text-xl pt-5"
-                    >4$</span
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
+                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >4$</span>
+                  <button
+                    class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
-                  <div class="btn-card pt-5">
-                    <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
-                    >
-                      Add to cart
-                    </button>
-                  </div>
+                    Add to cart
+                  </button>
                 </div>
               </div>
             </div>
@@ -668,7 +664,7 @@
             <input
               type="email"
               placeholder="Enter your email"
-              class="w-70 h-13 px-4 py-2 rounded-lg mb-2 focus:outline-none bg-amber-900 text-white"
+              class="w-full sm:w-[300px] h-12 px-4 py-2 rounded-lg mb-2 focus:outline-none focus:ring-2 focus:ring-amber-700 bg-amber-900 text-white placeholder-gray-300"
             />
           </div>
         </div>
@@ -678,7 +674,7 @@
           <label class="relative inline-flex items-center cursor-pointer">
             <input type="checkbox" class="sr-only peer" />
             <div
-              class="w-11 h-6 bg-gray-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-red-800 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-red-800 after:border-red-800 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-400"
+              class="w-11 h-6 bg-gray-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-red-800 after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-red-800 after:border-red-800 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-400"
             ></div>
           </label>
         </div>
