@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Drinks</title>
-    <!-- tailwind link -->
-    <link rel="stylesheet" href="src/output.css" />
-    <!-- flowbite link -->
+    <title>Drinks - BreadOfLife Bakery</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Flowbite CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
       rel="stylesheet"
     />
-    <!-- font-awesome cdnjs link -->
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -25,7 +25,7 @@
     <div class="container mx-auto px-6 pt-8">
       <a
         href="menu.html"
-        class="inline-flex items-center text-amber-900 hover:text-red-700 font-semibold text-lg transition"
+        class="inline-flex items-center text-amber-900 hover:text-red-700 font-semibold text-2xl transition font-serif"
       >
         <svg
           class="w-5 h-5 mr-2"
@@ -44,13 +44,15 @@
       </a>
     </div>
 
-    <!-- main -->
+    <!-- Main -->
     <main class="container mx-auto px-6 py-5">
       <!-- Hero Section -->
-      <div class="max-w-7xl mx-auto flex items-center justify-between mb-12">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-center gap-40 mb-12"
+      >
         <div>
           <h1
-            class="text-7xl md:text-7xl font-serif text-amber-900 leading-tight"
+            class="text-7xl md:text-8xl font-serif text-amber-900 leading-tight"
           >
             Liquid<br />Comfort
           </h1>
@@ -59,7 +61,7 @@
           <img
             src="images/latte-drink-section.png"
             alt="Drink Products"
-            class="w-full max-w-3xl h-auto object-contain"
+            class="w-90 max-w-3xl h-auto object-contain"
           />
         </div>
       </div>
@@ -424,7 +426,7 @@
           <!-- Column 1 -->
           <div>
             <h3 class="text-white font-bold mb-4">Site Menu</h3>
-            <ul class="space-y-2 text-amber-800">
+            <ul class="space-y-2">
               <li>
                 <a href="index.html" class="hover:text-amber-900 text-gray-100"
                   >Home</a
@@ -453,7 +455,7 @@
           <!-- Column 2 -->
           <div>
             <h3 class="text-white font-bold mb-4">Services</h3>
-            <ul class="space-y-2 text-amber-800">
+            <ul class="space-y-2">
               <li>
                 <a href="#" class="hover:text-amber-900 text-gray-100"
                   >Catering</a
@@ -475,7 +477,7 @@
           <!-- Column 3 -->
           <div>
             <h3 class="text-white font-bold mb-4">Support</h3>
-            <ul class="space-y-2 text-amber-800">
+            <ul class="space-y-2">
               <li>
                 <a href="#" class="hover:text-amber-900 text-gray-100">FAQ</a>
               </li>
@@ -501,7 +503,7 @@
             <input
               type="email"
               placeholder="Enter your email"
-              class="w-70 h-13 px-4 py-2 rounded-lg mb-2 focus:outline-none bg-amber-900 text-white"
+              class="w-full px-4 py-2 rounded-lg mb-2 focus:outline-none bg-amber-900 text-white placeholder-gray-300"
             />
           </div>
         </div>
@@ -519,7 +521,7 @@
     </footer>
     <!-- script -->
     <script src="js/script.js"></script>
-    <!-- flowbite script -->
+    <!-- Flowbite Script -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
   </body>
 </html>

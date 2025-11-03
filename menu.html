@@ -14,11 +14,17 @@
     <!-- font-awesome cdnjs link -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <style>
+      .btn-card button {
+        transition: all 0.3s ease;
+      }
+      .btn-card button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    </style>
   </head>
   <body class="min-h-screen bg-orange-100">
     <!-- Header -->
@@ -36,19 +42,19 @@
                   alt="BreadOfLife-logo"
                   class="h-16 w-16 object-contain"
                 />
-                <h1 class="text-2xl font-bold font-serif text-amber-900">
+                <h1 class="text-xl md:text-2xl font-bold font-serif text-amber-900">
                   BreadOfLife-Backery
                 </h1>
               </div>
 
               <!-- Search and Icons -->
-              <div class="flex items-center space-x-4">
+              <div class="flex items-center space-x-2 md:space-x-4">
                 <!-- Search Bar -->
-                <div class="relative">
+                <div class="relative hidden md:block">
                   <input
                     type="text"
                     placeholder="Search"
-                    class="pl-13 pr-4 py-2 border border-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-900 bg-white/80 w-64 rounded-lg text-lg"
+                    class="pl-10 pr-4 py-2 border border-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-900 bg-white/80 w-48 lg:w-64 rounded-lg text-lg"
                   />
                   <svg
                     class="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
@@ -66,9 +72,9 @@
                 </div>
 
                 <!-- Cart Icon -->
-                <button class="text-amber-900 hover:text-red-700">
+                <a href="menu.html" class="text-amber-900 hover:text-red-700 transition">
                   <svg
-                    class="w-7 h-7"
+                    class="w-6 h-6 md:w-7 md:h-7"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -80,12 +86,12 @@
                       d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                     ></path>
                   </svg>
-                </button>
+                </a>
 
                 <!-- User Icon -->
-                <button class="text-amber-900 hover:text-red-700">
+                <a href="contact.html" class="text-amber-900 hover:text-red-700 transition">
                   <svg
-                    class="w-7 h-7"
+                    class="w-6 h-6 md:w-7 md:h-7"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -97,7 +103,7 @@
                       d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                     ></path>
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -106,24 +112,25 @@
       <!-- navbar -->
       <nav class="bg-orange-100">
         <div class="container mx-auto px-6">
-          <ul class="flex items-center justify-center space-x-12 py-4">
+          <ul class="flex items-center justify-center space-x-6 md:space-x-12 py-4">
             <li>
               <a
                 href="index.html"
-                class="text-amber-900 hover:text-red-700 transition font-semibold text-lg"
+                class="text-amber-900 hover:text-red-700 transition font-semibold text-base md:text-lg"
                 >Home</a
               >
             </li>
             <li>
               <a
                 href="about.html"
-                class="text-amber-900 hover:text-red-700 transition font-semibold text-lg"
+                class="text-amber-900 hover:text-red-700 transition font-semibold text-base md:text-lg"
                 >About us</a
               >
             </li>
             <li class="relative group">
-              <button
-                class="text-amber-900 hover:text-red-700 transition font-semibold text-lg flex items-center gap-1"
+              <a
+                href="menu.html"
+                class="text-amber-900 hover:text-red-700 transition font-semibold text-base md:text-lg flex items-center gap-1"
               >
                 Menu
                 <svg
@@ -139,7 +146,7 @@
                     d="M19 9l-7 7-7-7"
                   ></path>
                 </svg>
-              </button>
+              </a>
               <!-- Dropdown Menu -->
               <div
                 class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-orange-100 shadow-lg border border-amber-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 rounded-sm"
@@ -147,21 +154,21 @@
                 <ul class="py-2">
                   <li>
                     <a
-                      href="#breads"
+                      href="breads.html"
                       class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 transition"
                       >Breads</a
                     >
                   </li>
                   <li>
                     <a
-                      href="#cakes"
+                      href="cakes.html"
                       class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 transition"
                       >Cakes</a
                     >
                   </li>
                   <li>
                     <a
-                      href="#drinks"
+                      href="drinks.html"
                       class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 transition"
                       >Drinks</a
                     >
@@ -172,7 +179,7 @@
             <li>
               <a
                 href="contact.html"
-                class="text-amber-900 hover:text-red-700 transition font-semibold text-lg"
+                class="text-amber-900 hover:text-red-700 transition font-semibold text-base md:text-lg"
                 >Contact Us</a
               >
             </li>
@@ -182,12 +189,12 @@
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-6 py-5">
+    <main class="container mx-auto px-4 md:px-6 py-5">
       <!-- Hero Section -->
-      <div class="max-w-7xl mx-auto flex items-center justify-between mb-12">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
         <div>
           <h1
-            class="text-7xl md:text-7xl font-serif text-amber-900 leading-tight"
+            class="text-5xl md:text-7xl font-serif text-amber-900 leading-tight"
           >
             Where life<br />tastes sweet
           </h1>
@@ -196,31 +203,31 @@
           <img
             src="images/menu-baner.png"
             alt="Bakery Products"
-            class="w-full max-w-3xl h-auto object-contain"
+            class="w-full max-w-md md:max-w-3xl h-auto object-contain"
           />
         </div>
       </div>
       <!--Breads Section  -->
       <section id="breads" class="mb-16">
-        <div class="max-w-[1080px] mx-auto">
+        <div class="max-w-[1300px] mx-auto">
           <div class="flex justify-between items-center mb-6">
-            <h2 class="text-3xl font-serif text-amber-900">Breads</h2>
+            <h2 class="text-2xl md:text-3xl font-serif text-amber-900">Breads</h2>
             <a
               href="breads.html"
-              class="text-amber-900 hover:text-amber-700 font-medium text-xl font-serif"
+              class="text-amber-900 hover:text-amber-700 font-medium text-lg md:text-xl font-serif"
               >See More →</a
             >
           </div>
           <div class="flex justify-center">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-10">
               <!-- White Bread -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
               >
                 <img
                   src="bread-section/white bread.png"
                   alt="White Bread"
-                  class="w-60 h-60 object-cover p-2"
+                  class="w-full h-60 object-cover p-2"
                 />
                 <h3
                   class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
@@ -243,12 +250,12 @@
 
               <!-- Wheat Bread -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
               >
                 <img
                   src="bread-section/whole wheat bread.png"
                   alt="Wheat Bread"
-                  class="w-60 h-60 object-cover p-2"
+                  class="w-full h-60 object-cover p-2"
                 />
                 <h3
                   class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
@@ -271,12 +278,12 @@
 
               <!-- Butter Croissant -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
               >
                 <img
                   src="bread-section/classic butter croosaint.png"
                   alt="Butter Croissant"
-                  class="w-60 h-60 object-cover p-2"
+                  class="w-full h-60 object-cover p-2"
                 />
                 <h3
                   class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
@@ -299,12 +306,12 @@
 
               <!-- Multigrain Bread -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
               >
                 <img
                   src="bread-section/multigrain bread.png"
                   alt="Multigrain Bread"
-                  class="w-60 h-60 object-cover p-2"
+                  class="w-full h-60 object-cover p-2"
                 />
                 <h3
                   class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
@@ -330,25 +337,25 @@
       </section>
       <!-- Cakes Section -->
       <section id="cakes" class="mb-16">
-        <div class="max-w-[1080px] mx-auto">
+        <div class="max-w-[1300px] mx-auto">
           <div class="flex justify-between items-center mb-6">
-            <h2 class="text-3xl font-serif text-amber-900">Cakes</h2>
+            <h2 class="text-2xl md:text-3xl font-serif text-amber-900">Cakes</h2>
             <a
               href="cakes.html"
-              class="text-amber-900 hover:text-amber-700 font-medium text-xl font-serif"
+              class="text-amber-900 hover:text-amber-700 font-medium text-lg md:text-xl font-serif"
               >See More →</a
             >
           </div>
           <div class="flex justify-center">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-10">
               <!-- Pound Cake -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
               >
                 <img
                   src="cake-section/pound cake.png"
                   alt="Pound Cake"
-                  class="w-60 h-60 object-cover p-2"
+                  class="w-full h-60 object-cover p-2"
                 />
                 <h3
                   class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
@@ -371,12 +378,12 @@
 
               <!-- Red Velvet Cake -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
               >
                 <img
                   src="cake-section/red velvet cake.png"
                   alt="Red Velvet Cake"
-                  class="w-60 h-60 object-cover p-2"
+                  class="w-full h-60 object-cover p-2"
                 />
                 <h3
                   class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
@@ -399,12 +406,12 @@
 
               <!-- Carrot Cake -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
               >
                 <img
                   src="cake-section/carrot cake.png"
                   alt="Carrot Cake"
-                  class="w-60 h-60 object-cover p-2"
+                  class="w-full h-60 object-cover p-2"
                 />
                 <h3
                   class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
@@ -427,12 +434,12 @@
 
               <!-- Vanilla Cake -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
               >
                 <img
                   src="cake-section/vanilla cake.png"
                   alt="Vanilla Cake"
-                  class="w-60 h-60 object-cover p-2"
+                  class="w-full h-60 object-cover p-2"
                 />
                 <h3
                   class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
@@ -459,25 +466,25 @@
 
       <!-- Drinks Section -->
       <section id="drinks" class="mb-16">
-        <div class="max-w-[1080px] mx-auto">
+        <div class="max-w-[1300px] mx-auto">
           <div class="flex justify-between items-center mb-6">
-            <h2 class="text-3xl font-serif text-amber-900">Drinks</h2>
+            <h2 class="text-2xl md:text-3xl font-serif text-amber-900">Drinks</h2>
             <a
               href="drinks.html"
-              class="text-amber-900 hover:text-amber-700 font-medium text-xl font-serif"
+              class="text-amber-900 hover:text-amber-700 font-medium text-lg md:text-xl font-serif"
               >See More →</a
             >
           </div>
           <div class="flex justify-center">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-10">
               <!-- Espresso -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
               >
                 <img
                   src="drink-section/espresso.png"
                   alt="Espresso"
-                  class="w-60 h-60 object-cover p-2"
+                  class="w-full h-60 object-cover p-2"
                 />
                 <h3
                   class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
@@ -500,12 +507,12 @@
 
               <!-- Americano -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
               >
                 <img
                   src="drink-section/americano.png"
                   alt="Americano"
-                  class="w-60 h-60 object-cover p-2"
+                  class="w-full h-60 object-cover p-2"
                 />
                 <h3
                   class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
@@ -528,12 +535,12 @@
 
               <!-- Matcha Latte -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
               >
                 <img
                   src="drink-section/matcha latte.png"
                   alt="Matcha Latte"
-                  class="w-60 h-60 object-cover p-2"
+                  class="w-full h-60 object-cover p-2"
                 />
                 <h3
                   class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
@@ -555,12 +562,12 @@
               </div>
               <!-- Latte -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
               >
                 <img
                   src="drink-section/latte.png"
                   alt="Latte"
-                  class="w-60 h-60 object-cover p-2"
+                  class="w-full h-60 object-cover p-2"
                 />
                 <h3
                   class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
@@ -588,22 +595,22 @@
     <!-- Footer -->
     <footer class="bg-rose-300/50 py-12 mt-16">
       <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           <!-- Column 1 -->
           <div>
             <h3 class="text-white font-bold mb-4">Site Menu</h3>
             <ul class="space-y-2 text-amber-800">
               <li>
-                <a href="#" class="hover:text-amber-900 text-gray-100">Home</a>
+                <a href="index.html" class="hover:text-amber-900 text-gray-100">Home</a>
               </li>
               <li>
-                <a href="#" class="hover:text-amber-900 text-gray-100">About</a>
+                <a href="about.html" class="hover:text-amber-900 text-gray-100">About</a>
               </li>
               <li>
-                <a href="#" class="hover:text-amber-900 text-gray-100">Menu</a>
+                <a href="menu.html" class="hover:text-amber-900 text-gray-100">Menu</a>
               </li>
               <li>
-                <a href="#" class="hover:text-amber-900 text-gray-100"
+                <a href="contact.html" class="hover:text-amber-900 text-gray-100"
                   >Contact</a
                 >
               </li>
@@ -652,7 +659,7 @@
 
           <!-- Column 4 - Newsletter -->
           <div>
-            <h3 class="text-white font-semibold mb-4 font-mono text-5xl">
+            <h3 class="text-white font-semibold mb-4 font-mono text-3xl md:text-5xl">
               Site Title
             </h3>
             <p class="text-gray-100 text-lg mb-4">
@@ -661,19 +668,23 @@
             <input
               type="email"
               placeholder="Enter your email"
-              class="w-70 h-13 px-4 py-2 rounded-lg mb-2 focus:outline-none bg-amber-900 text-white"
+              class="w-full px-4 py-2 rounded-lg mb-2 focus:outline-none bg-amber-900 text-white"
             />
           </div>
         </div>
 
         <!-- Dark Mode Toggle -->
-        <div class="mt-8 flex">
+        <div class="mt-8 flex items-center gap-3">
           <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" class="sr-only peer" />
+            <input type="checkbox" class="sr-only peer" id="darkModeToggle" />
             <div
               class="w-11 h-6 bg-gray-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-red-800 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-red-800 after:border-red-800 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-400"
             ></div>
           </label>
+          <span class="text-amber-900 font-medium">
+            <i class="fas fa-moon" id="modeIcon"></i>
+            <span id="modeText">Dark Mode</span>
+          </span>
         </div>
       </div>
     </footer>
