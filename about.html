@@ -19,8 +19,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+    // Enable dark mode using class strategy
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
   </head>
-  <body class="min-h-screen bg-orange-100">
+  <body class="min-h-screen bg-orange-100  text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 ">
     <!-- Header -->
     <header class="sticky top-0 z-50">
       <div class="bg-orange-100 backdrop-blur-sm pt-10">
@@ -66,7 +73,7 @@
                 </div>
 
                 <!-- Cart Icon -->
-                <button class="text-amber-900 hover:text-red-700">
+                <button class="text-amber-900 hover:text-red-700" title="Shopping Cart">
                   <svg
                     class="w-7 h-7"
                     fill="none"
@@ -83,7 +90,8 @@
                 </button>
 
                 <!-- User Icon -->
-                <button class="text-amber-900 hover:text-red-700">
+                <button class="text-amber-900 hover:text-red-700" title="User Account" aria-label="User account">
+                  <span class="sr-only">User account</span>
                   <svg
                     class="w-7 h-7"
                     fill="none"
@@ -325,18 +333,22 @@
         </div>
 
         <!-- Dark Mode Toggle -->
-        <div class="mt-8 flex">
-          <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" class="sr-only peer" />
-            <div
-              class="w-11 h-6 bg-gray-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-red-800 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-red-800 after:border-red-800 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-400"
-            ></div>
-          </label>
-        </div>
+      <div class="mt-8 flex">
+      <label class="relative inline-flex items-center cursor-pointer">
+      <input id="theme-toggle" type="checkbox" class="sr-only peer" title="Toggle dark mode" aria-label="Toggle dark mode" name="theme-toggle">
+      <div
+        class="w-12 h-6 bg-gray-300 peer-focus:outline-none rounded-full peer peer-checked:bg-gray-700
+        after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300
+        after:border after:rounded-full after:h-5 after:w-3 after:transition-all peer-checked:after:translate-x-full
+        peer-checked:after:border-white">
       </div>
+      
+    </label>
+     </div>
     </footer>
     <!-- script -->
     <script src="js/script.js"></script>
+    <script src="js/spaghetti.js"></script>
     <!-- flowbite script -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
   </body>

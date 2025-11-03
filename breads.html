@@ -10,8 +10,16 @@
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+    // Enable dark mode using class strategy
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
 </head>
-<body class="min-h-screen bg-orange-100">
+<body class="min-h-screen bg-orange-100  text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
     <!-- Back Button -->
     <div class="container mx-auto px-6 pt-8">
         <a href="menu.html" class="inline-flex items-center text-amber-900 hover:text-red-700 font-semibold text-2xl transition font-serif">
@@ -288,16 +296,40 @@
             </div>
 
             <!-- Dark Mode Toggle -->
-            <div class="mt-8 flex">
-                <label class="relative inline-flex items-center cursor-pointer">
-                    <input type="checkbox" class="sr-only peer" />
-                    <div class="w-11 h-6 bg-gray-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-red-800 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-red-800 after:border-red-800 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-400"></div>
-                </label>
-            </div>
-        </div>
+    <div class="mt-8 flex">
+      <label class="relative inline-flex items-center cursor-pointer">
+      <input id="theme-toggle" type="checkbox" class="sr-only peer">
+      <div
+        class="w-12 h-6 bg-gray-300 peer-focus:outline-none rounded-full peer peer-checked:bg-gray-700
+        after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300
+        after:border after:rounded-full after:h-5 after:w-3 after:transition-all peer-checked:after:translate-x-full
+        peer-checked:after:border-white">
+      </div>
+      
+    </label>
+     </div>
     </footer>
+       <!-- mode -->
+      <script>
+          const toggleBtn = document.getElementById('theme-toggle');
+          const html = document.documentElement;
+
+          // Load saved theme
+          if (localStorage.getItem('theme') === 'dark') {
+            html.classList.add('dark');
+          } else {
+            html.classList.remove('dark');
+          }
+
+          // Toggle on click
+          toggleBtn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+          });
+  </script>
     <!-- script -->
     <script src="js/script.js"></script>
+    <script src="js/spaghetti.js"></script>
     <!-- Flowbite Script -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>

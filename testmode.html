@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+
+    <!-- tailwind link -->
+    <link rel="stylesheet" href="src/output.css" />
+
+    <!-- flowbite -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body class="min-h-screen bg-orange-100 text-amber-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500">
+    <!-- header -->
+    <header class="sticky top-0 z-50">
+      <div class="bg-orange-100 dark:bg-gray-800 backdrop-blur-sm pt-10">
+        <div class="container mx-auto px-3">
+          <div
+            class="bg-stone-100/50 dark:bg-gray-700/50 backdrop-blur-sm shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl px-4 py-1"
+          >
+            <div class="flex items-center justify-between">
+              <!-- Logo -->
+              <div class="flex items-center gap-3">
+                <img
+                  src="logo/logo.png"
+                  alt="BreadOfLife-logo"
+                  class="h-16 w-16 object-contain"
+                />
+                <h1 class="text-2xl font-bold font-serif">BreadOfLife-Bakery</h1>
+              </div>
+
+              <!-- Search and Icons -->
+              <div class="flex items-center space-x-4">
+                <div class="relative">
+                  <input
+                    type="text"
+                    placeholder="Search"
+                    class="pl-10 pr-4 py-2 border border-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-900 bg-white/80 dark:bg-gray-600 dark:placeholder-gray-300 w-64 rounded-lg text-lg"
+                  />
+                  <svg
+                    class="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    ></path>
+                  </svg>
+                </div>
+
+                <!-- Cart Icon -->
+                <button class="hover:text-red-700">
+                  <i class="fa-solid fa-cart-shopping text-2xl"></i>
+                </button>
+
+                <!-- User Icon -->
+                <button class="hover:text-red-700">
+                  <i class="fa-solid fa-user text-2xl"></i>
+                </button>
+
+                <!-- Dark Mode Switch -->
+                <label class="relative inline-flex items-center cursor-pointer">
+                  <input id="dark-toggle" type="checkbox" class="sr-only peer" />
+                  <div
+                    class="w-11 h-6 bg-gray-300 peer-focus:outline-none rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all"
+                  ></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- navbar -->
+      <nav class="bg-orange-100 dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+          <ul class="flex items-center justify-center space-x-12 py-4">
+            <li><a href="index.html" class="font-semibold text-lg hover:text-red-700">Home</a></li>
+            <li><a href="about.html" class="font-semibold text-lg hover:text-red-700">About us</a></li>
+            <li><a href="contact.html" class="font-semibold text-lg hover:text-red-700">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- main -->
+    <main class="container mx-auto px-6 py-8">
+      <div
+        class="w-[1200px] h-[400px] bg-rose-200/50 dark:bg-gray-700/60 m-auto flex justify-between text-center items-center rounded-xl mt-[100px]"
+      >
+        <img
+          class="w-[400px]"
+          src="images/coffee-banner-homepage.png"
+          alt="coffee banner"
+        />
+        <h1 class="text-[75px] font-serif font-bold">You're Welcome</h1>
+        <img
+          class="w-[400px]"
+          src="images/bread-banner-homepage.png"
+          alt="coffee banner"
+        />
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="bg-rose-300/50 dark:bg-gray-800 py-12 mt-16">
+      <div class="container mx-auto px-6">
+        <p class="text-center text-lg text-gray-800 dark:text-gray-300">
+          © 2025 BreadOfLife Bakery — All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- dark mode script -->
+    <script>
+      const toggle = document.getElementById('dark-toggle');
+      const html = document.documentElement;
+
+      // load saved theme
+      if (localStorage.getItem('theme') === 'dark') {
+        html.classList.add('dark');
+        toggle.checked = true;
+      }
+
+      toggle.addEventListener('change', function () {
+        if (this.checked) {
+          html.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          html.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    </script>
+
+    <!-- flowbite script -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  </body>
+</html>
