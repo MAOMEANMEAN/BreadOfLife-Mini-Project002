@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <!-- tailwind link -->
+    <link rel="stylesheet" href="src/output.css" />
+    <!-- link flowbite -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="min-h-screen bg-orange-100">
+    <!-- header -->
+    <header>
+      <header class="sticky top-0 z-50">
+        <div class="bg-orange-100 backdrop-blur-sm pt-10">
+          <div class="container mx-auto px-3">
+            <div
+              class="bg-stone-100/50 backdrop-blur-sm shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl px-4 py-1"
+            >
+              <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                  <img
+                    src="logo/logo.png"
+                    alt="BreadOfLife-logo"
+                    class="h-16 w-16 object-contain"
+                  />
+                  <h1 class="text-2xl font-bold font-serif text-amber-900">
+                    BreadOfLife-Backery
+                  </h1>
+                </div>
+
+                <!-- Search and Icons -->
+                <div class="flex items-center space-x-4">
+                  <!-- Search Bar -->
+                  <div class="relative">
+                    <input
+                      type="text"
+                      placeholder="Search"
+                      class="pl-13 pr-4 py-2 border border-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-900 bg-white/80 w-64 rounded-lg text-lg"
+                    />
+                    <svg
+                      class="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      ></path>
+                    </svg>
+                  </div>
+
+                  <!-- Cart Icon -->
+                  <button class="text-amber-900 hover:text-red-700">
+                    <svg
+                      class="w-7 h-7"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                      ></path>
+                    </svg>
+                  </button>
+
+                  <!-- User Icon -->
+                  <button class="text-amber-900 hover:text-red-700">
+                    <svg
+                      class="w-7 h-7"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- navbar -->
+        <nav class="bg-orange-100">
+          <div class="container mx-auto px-6">
+            <ul class="flex items-center justify-center space-x-12 py-4">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-amber-900 hover:text-red-700 transition font-semibold text-lg"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-amber-900 hover:text-red-700 transition font-semibold text-lg"
+                  >About us</a
+                >
+              </li>
+              <li class="relative group">
+                <button
+                  class="text-amber-900 hover:text-red-700 transition font-semibold text-lg flex items-center gap-1"
+                >
+                  Menu
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    ></path>
+                  </svg>
+                </button>
+                <!-- Dropdown Menu -->
+                <div
+                  class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-orange-100 shadow-lg border border-amber-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 rounded-sm"
+                >
+                  <ul class="py-2">
+                    <li>
+                      <a
+                        href="#breads"
+                        class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 transition"
+                        >Breads</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#cakes"
+                        class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 transition"
+                        >Cakes</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#drinks"
+                        class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 transition"
+                        >Drinks</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-amber-900 hover:text-red-700 transition font-semibold text-lg"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </header>
+    <!-- main -->
+    <main class="container mx-auto px-6 py-8">
+      <!-- banner -->
+      <div
+        class="w-[1200px] h-[400px] bg-rose-200/50 m-auto flex justify-between text-center items-center rounded-xl mt-[100px]"
+      >
+        <img
+          class="w-[400px]"
+          src="images/coffee-banner-homepage.png"
+          alt="coffee banner"
+        />
+        <h1 class="text-[75px] text-amber-800 font-serif font-bold">
+          You're Welcome
+        </h1>
+        <img
+          class="w-[400px]"
+          src="images/bread-banner-homepage.png"
+          alt="coffee banner"
+        />
+      </div>
+      <h1
+        class="text-[50px] text-amber-800 font-serif font-bold p-20 text-center"
+      >
+        What do yo want to eat?
+      </h1>
+      <!-- cart product -->
+      <!-- bread -->
+      <!-- Breads Section -->
+      <section class="mb-16">
+        <div class="max-w-[1080px] mx-auto">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-3xl font-serif text-amber-900">Breads</h2>
+            <a
+              href="breads.html"
+              class="text-amber-900 hover:text-amber-700 font-medium text-xl font-serif"
+              >See More →</a
+            >
+          </div>
+          <div class="flex justify-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+              <!-- White Bread -->
+              <div
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+              >
+                <img
+                  src="bread-section/white bread.png"
+                  alt="White Bread"
+                  class="w-60 h-60 object-cover p-2"
+                />
+                <h3
+                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                >
+                  White Bread
+                </h3>
+                <div class="flex justify-between items-center">
+                  <span class="text-red-500 font-semibold text-xl pt-5"
+                    >2.5$</span
+                  >
+                  <div class="btn-card pt-5">
+                    <button
+                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Wheat Bread -->
+              <div
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+              >
+                <img
+                  src="bread-section/whole wheat bread.png"
+                  alt="Wheat Bread"
+                  class="w-60 h-60 object-cover p-2"
+                />
+                <h3
+                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                >
+                  Wheat Bread
+                </h3>
+                <div class="flex justify-between items-center">
+                  <span class="text-red-500 font-semibold text-xl pt-5"
+                    >3$</span
+                  >
+                  <div class="btn-card pt-5">
+                    <button
+                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Butter Croissant -->
+              <div
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+              >
+                <img
+                  src="bread-section/classic butter croosaint.png"
+                  alt="Butter Croissant"
+                  class="w-60 h-60 object-cover p-2"
+                />
+                <h3
+                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                >
+                  Butter Croissant
+                </h3>
+                <div class="flex justify-between items-center">
+                  <span class="text-red-500 font-semibold text-xl pt-5"
+                    >4.5$</span
+                  >
+                  <div class="btn-card pt-5">
+                    <button
+                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Multigrain Bread -->
+              <div
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+              >
+                <img
+                  src="bread-section/multigrain bread.png"
+                  alt="Multigrain Bread"
+                  class="w-60 h-60 object-cover p-2"
+                />
+                <h3
+                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                >
+                  Multigrain Bread
+                </h3>
+                <div class="flex justify-between items-center">
+                  <span class="text-red-500 font-semibold text-xl pt-5"
+                    >3.5$</span
+                  >
+                  <div class="btn-card pt-5">
+                    <button
+                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cakes Section -->
+      <section class="mb-16">
+        <div class="max-w-[1080px] mx-auto">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-3xl font-serif text-amber-900">Cakes</h2>
+            <a
+              href="cakes.html"
+              class="text-amber-900 hover:text-amber-700 font-medium text-xl font-serif"
+              >See More →</a
+            >
+          </div>
+          <div class="flex justify-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+              <!-- Pound Cake -->
+              <div
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+              >
+                <img
+                  src="cake-section/pound cake.png"
+                  alt="Pound Cake"
+                  class="w-60 h-60 object-cover p-2"
+                />
+                <h3
+                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                >
+                  Pound Cake
+                </h3>
+                <div class="flex justify-between items-center">
+                  <span class="text-red-500 font-semibold text-xl pt-5"
+                    >12$</span
+                  >
+                  <div class="btn-card pt-5">
+                    <button
+                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Red Velvet Cake -->
+              <div
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+              >
+                <img
+                  src="cake-section/red velvet cake.png"
+                  alt="Red Velvet Cake"
+                  class="w-60 h-60 object-cover p-2"
+                />
+                <h3
+                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                >
+                  Red Velvet Cake
+                </h3>
+                <div class="flex justify-between items-center">
+                  <span class="text-red-500 font-semibold text-xl pt-5"
+                    >15$</span
+                  >
+                  <div class="btn-card pt-5">
+                    <button
+                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Carrot Cake -->
+              <div
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+              >
+                <img
+                  src="cake-section/carrot cake.png"
+                  alt="Carrot Cake"
+                  class="w-60 h-60 object-cover p-2"
+                />
+                <h3
+                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                >
+                  Carrot Cake
+                </h3>
+                <div class="flex justify-between items-center">
+                  <span class="text-red-500 font-semibold text-xl pt-5"
+                    >14$</span
+                  >
+                  <div class="btn-card pt-5">
+                    <button
+                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Vanilla Cake -->
+              <div
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+              >
+                <img
+                  src="cake-section/vanilla cake.png"
+                  alt="Vanilla Cake"
+                  class="w-60 h-60 object-cover p-2"
+                />
+                <h3
+                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                >
+                  Vanilla Cake
+                </h3>
+                <div class="flex justify-between items-center">
+                  <span class="text-red-500 font-semibold text-xl pt-5"
+                    >13$</span
+                  >
+                  <div class="btn-card pt-5">
+                    <button
+                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Drinks Section -->
+      <section class="mb-16">
+        <div class="max-w-[1080px] mx-auto">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-3xl font-serif text-amber-900">Drinks</h2>
+            <a
+              href="drinks.html"
+              class="text-amber-900 hover:text-amber-700 font-medium text-xl font-serif"
+              >See More →</a
+            >
+          </div>
+          <div class="flex justify-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+              <!-- Espresso -->
+              <div
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+              >
+                <img
+                  src="drink-section/espresso.png"
+                  alt="Espresso"
+                  class="w-60 h-60 object-cover p-2"
+                />
+                <h3
+                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                >
+                  Espresso
+                </h3>
+                <div class="flex justify-between items-center">
+                  <span class="text-red-500 font-semibold text-xl pt-5"
+                    >3$</span
+                  >
+                  <div class="btn-card pt-5">
+                    <button
+                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Americano -->
+              <div
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+              >
+                <img
+                  src="drink-section/americano.png"
+                  alt="Americano"
+                  class="w-60 h-60 object-cover p-2"
+                />
+                <h3
+                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                >
+                  Americano
+                </h3>
+                <div class="flex justify-between items-center">
+                  <span class="text-red-500 font-semibold text-xl pt-5"
+                    >3.5$</span
+                  >
+                  <div class="btn-card pt-5">
+                    <button
+                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Matcha Latte -->
+              <div
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+              >
+                <img
+                  src="drink-section/matcha latte.png"
+                  alt="Matcha Latte"
+                  class="w-60 h-60 object-cover p-2"
+                />
+                <h3
+                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                >
+                  Matcha Latte
+                </h3>
+                <div class="flex justify-between items-center">
+                  <span class="text-red-500 font-semibold text-xl pt-5"
+                    >4.5$</span
+                  >
+                  <div class="btn-card pt-5">
+                    <button
+                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Latte -->
+              <div
+                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+              >
+                <img
+                  src="drink-section/latte.png"
+                  alt="Latte"
+                  class="w-60 h-60 object-cover p-2"
+                />
+                <h3
+                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                >
+                  Latte
+                </h3>
+                <div class="flex justify-between items-center">
+                  <span class="text-red-500 font-semibold text-xl pt-5"
+                    >4$</span
+                  >
+                  <div class="btn-card pt-5">
+                    <button
+                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="bg-rose-300/50 py-12 mt-16">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Column 1 -->
+          <div>
+            <h3 class="text-white font-bold mb-4">Site Menu</h3>
+            <ul class="space-y-2 text-amber-800">
+              <li>
+                <a href="#" class="hover:text-amber-900 text-gray-100">Home</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-900 text-gray-100">About</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-900 text-gray-100">Menu</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-900 text-gray-100"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2 -->
+          <div>
+            <h3 class="text-white font-bold mb-4">Services</h3>
+            <ul class="space-y-2 text-amber-800">
+              <li>
+                <a href="#" class="hover:text-amber-900 text-gray-100"
+                  >Catering</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-900 text-gray-100"
+                  >Custom Orders</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-900 text-gray-100"
+                  >Delivery</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3 -->
+          <div>
+            <h3 class="text-white font-bold mb-4">Support</h3>
+            <ul class="space-y-2 text-amber-800">
+              <li>
+                <a href="#" class="hover:text-amber-900 text-gray-100">FAQ</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-900 text-gray-100"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-900 text-gray-100">Terms</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4 - Newsletter -->
+          <div>
+            <h3 class="text-white font-semibold mb-4 font-mono text-5xl">
+              Site Title
+            </h3>
+            <p class="text-gray-100 text-lg mb-4">
+              Subscribe to our newsletter
+            </p>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="w-70 h-13 px-4 py-2 rounded-lg mb-2 focus:outline-none bg-amber-900 text-white"
+            />
+          </div>
+        </div>
+
+        <!-- Dark Mode Toggle -->
+        <div class="mt-8 flex">
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" class="sr-only peer" />
+            <div
+              class="w-11 h-6 bg-gray-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-red-800 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-red-800 after:border-red-800 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-400"
+            ></div>
+          </label>
+        </div>
+      </div>
+    </footer>
+    <!-- script -->
+    <script src="js/script.js"></script>
+    <!-- flowbite script -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  </body>
+</html>
