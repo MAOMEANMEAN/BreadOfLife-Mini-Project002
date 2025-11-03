@@ -66,7 +66,8 @@
                 </div>
 
                 <!-- Cart Icon -->
-                <button class="text-amber-900 hover:text-red-700">
+                <!-- Cart Icon -->
+                <button id="cart-btn" class="text-amber-900 hover:text-red-700">
                   <svg
                     class="w-7 h-7"
                     fill="none"
@@ -83,7 +84,7 @@
                 </button>
 
                 <!-- User Icon -->
-                <button class="text-amber-900 hover:text-red-700">
+                <button id="user-btn" class="text-amber-900 hover:text-red-700">
                   <svg
                     class="w-7 h-7"
                     fill="none"
@@ -193,7 +194,9 @@
           />
           <div class="absolute inset-0 bg-black/30"></div>
         </div>
-        <div class="relative h-full flex items-center justify-start px-12 md:px-24">
+        <div
+          class="relative h-full flex items-center justify-start px-12 md:px-24"
+        >
           <div class="text-left text-white px-12 py-10 bg-black/40 max-w-4xl">
             <h1 class="text-6xl md:text-8xl font-serif leading-tight">
               Baked with love,<br />
@@ -206,40 +209,62 @@
       </section>
 
       <div class="container mx-auto px-6 py-8">
+        <!-- Our Sweet Journey Section -->
+        <section class="mb-16">
+          <div class="max-w-4xl mx-auto">
+            <div class="p-12">
+              <h2 class="text-5xl font-serif text-amber-900 text-center mb-8">
+                Our Sweet<br />Journey
+              </h2>
 
-      <!-- Our Sweet Journey Section -->
-      <section class="mb-16">
-        <div class="max-w-4xl mx-auto">
-          <div class="p-12">
-            <h2 class="text-5xl font-serif text-amber-900 text-center mb-8">
-              Our Sweet<br />Journey
-            </h2>
+              <div class="space-y-6 text-amber-900">
+                <div class="bg-rose-300/30 rounded-2xl p-6">
+                  <p class="text-xl leading-relaxed text-center font-serif">
+                    Bread of Life began, not just as a bakery, but as a vision—a
+                    place where every loaf tells a story, and every pastry
+                    carries a purpose. Born from a desire to nourish both body
+                    and soul, we pour love into every joy, and peace into every
+                    recipe. What started as a humble kitchen with the aroma of
+                    fresh bread and laughter has grown into a community
+                    gathering place where everyone feels welcome and part of our
+                    community.
+                  </p>
+                </div>
 
-            <div class="space-y-6 text-amber-900">
-              <div class="bg-rose-300/30 rounded-2xl p-6">
-                <p class="text-xl leading-relaxed text-center font-serif">
-                  Bread of Life began, not just as a bakery, but as a vision—a place where every loaf tells a story, and every pastry carries a purpose. Born from a desire to nourish both body and soul, we pour love into every joy, and peace into every recipe. What started as a humble kitchen with the aroma of fresh bread and laughter has grown into a community gathering place where everyone feels welcome and part of our community.
-                </p>
-              </div>
-
-              <div class="bg-rose-300/30 rounded-2xl p-6">
-                <p class="text-xl leading-relaxed text-center font-serif">
-                  We believe that life, like baking, is a delicate balance of warmth, patience, and care. From sunrise sourdough to sunset cinnamon rolls, our creations are more than food—they're a testament to tradition, togetherness, and the simple beauty of connection. Whether you're sharing a croissant with a friend or savoring a quiet slice of cake, you're tasting the heart of what we do.
-                </p>
+                <div class="bg-rose-300/30 rounded-2xl p-6">
+                  <p class="text-xl leading-relaxed text-center font-serif">
+                    We believe that life, like baking, is a delicate balance of
+                    warmth, patience, and care. From sunrise sourdough to sunset
+                    cinnamon rolls, our creations are more than food—they're a
+                    testament to tradition, togetherness, and the simple beauty
+                    of connection. Whether you're sharing a croissant with a
+                    friend or savoring a quiet slice of cake, you're tasting the
+                    heart of what we do.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </section>
         <div class="flex items-center justify-center mt-18">
-                <img src="about-us-banner/កួរស្រូវ 2.png" alt="wheat" class="w-30 h-30 object-contain" />
-                <div class=" bg-rose-300/30 rounded-2xl p-4 w-150 h-20">
-                    <p class="text-xl font-serif text-amber-900 mx-6 italic text-center">
-                        This is our journey. And we're so glad you're part of it.
-                    </p>
-                </div>
-                <img src="about-us-banner/កួរស្រូវ​ 1.png" alt="wheat" class="w-30 h-30 object-contain" />
-              </div>
+          <img
+            src="about-us-banner/កួរស្រូវ 2.png"
+            alt="wheat"
+            class="w-30 h-30 object-contain"
+          />
+          <div class="bg-rose-300/30 rounded-2xl p-4 w-150 h-20">
+            <p
+              class="text-xl font-serif text-amber-900 mx-6 italic text-center"
+            >
+              This is our journey. And we're so glad you're part of it.
+            </p>
+          </div>
+          <img
+            src="about-us-banner/កួរស្រូវ​ 1.png"
+            alt="wheat"
+            class="w-30 h-30 object-contain"
+          />
+        </div>
       </div>
     </main>
 
@@ -252,16 +277,24 @@
             <h3 class="text-white font-bold mb-4">Site Menu</h3>
             <ul class="space-y-2 text-amber-800">
               <li>
-                <a href="index.html" class="hover:text-amber-900 text-gray-100">Home</a>
+                <a href="index.html" class="hover:text-amber-900 text-gray-100"
+                  >Home</a
+                >
               </li>
               <li>
-                <a href="about.html" class="hover:text-amber-900 text-gray-100">About</a>
+                <a href="about.html" class="hover:text-amber-900 text-gray-100"
+                  >About</a
+                >
               </li>
               <li>
-                <a href="menu.html" class="hover:text-amber-900 text-gray-100">Menu</a>
+                <a href="menu.html" class="hover:text-amber-900 text-gray-100"
+                  >Menu</a
+                >
               </li>
               <li>
-                <a href="contact.html" class="hover:text-amber-900 text-gray-100"
+                <a
+                  href="contact.html"
+                  class="hover:text-amber-900 text-gray-100"
                   >Contact</a
                 >
               </li>

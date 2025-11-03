@@ -29,7 +29,9 @@
             <div
               class="bg-stone-100/50 backdrop-blur-sm shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl px-4 py-1"
             >
-              <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div
+                class="flex flex-col sm:flex-row items-center justify-between gap-4"
+              >
                 <!-- Logo -->
                 <div class="flex items-center gap-3">
                   <img
@@ -37,13 +39,17 @@
                     alt="BreadOfLife-logo"
                     class="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 object-contain"
                   />
-                  <h1 class="text-xl sm:text-2xl md:text-3xl font-bold font-serif text-amber-900">
+                  <h1
+                    class="text-xl sm:text-2xl md:text-3xl font-bold font-serif text-amber-900"
+                  >
                     BreadOfLife-Backery
                   </h1>
                 </div>
 
                 <!-- Search and Icons -->
-                <div class="flex items-center space-x-2 sm:space-x-4 flex-wrap justify-center">
+                <div
+                  class="flex items-center space-x-2 sm:space-x-4 flex-wrap justify-center"
+                >
                   <!-- Search Bar -->
                   <div class="relative w-full sm:w-auto">
                     <input
@@ -67,7 +73,11 @@
                   </div>
 
                   <!-- Cart Icon -->
-                  <button class="text-amber-900 hover:text-red-700">
+                  <!-- Cart Icon -->
+                  <button
+                    id="cart-btn"
+                    class="text-amber-900 hover:text-red-700"
+                  >
                     <svg
                       class="w-7 h-7"
                       fill="none"
@@ -84,7 +94,10 @@
                   </button>
 
                   <!-- User Icon -->
-                  <button class="text-amber-900 hover:text-red-700">
+                  <button
+                    id="user-btn"
+                    class="text-amber-900 hover:text-red-700"
+                  >
                     <svg
                       class="w-7 h-7"
                       fill="none"
@@ -108,13 +121,29 @@
         <nav class="bg-orange-100">
           <div class="container mx-auto px-4 sm:px-6">
             <div class="flex items-center justify-between lg:hidden py-4">
-              <button class="text-amber-900 hover:text-red-700" id="mobile-menu-button">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              <button
+                class="text-amber-900 hover:text-red-700"
+                id="mobile-menu-button"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
                 </svg>
               </button>
             </div>
-            <ul class="hidden lg:flex flex-col lg:flex-row items-center justify-center lg:space-x-12 py-4 space-y-4 lg:space-y-0" id="nav-menu">
+            <ul
+              class="hidden lg:flex flex-col lg:flex-row items-center justify-center lg:space-x-12 py-4 space-y-4 lg:space-y-0"
+              id="nav-menu"
+            >
               <li>
                 <a
                   href="index.html"
@@ -200,7 +229,9 @@
           src="images/coffee-banner-homepage.png"
           alt="coffee banner"
         />
-        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-[75px] text-amber-800 font-serif font-bold my-6 lg:my-0">
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl lg:text-[75px] text-amber-800 font-serif font-bold my-6 lg:my-0"
+        >
           You're Welcome
         </h1>
         <img
@@ -227,7 +258,9 @@
             >
           </div>
           <div class="flex justify-center">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 w-full">
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 w-full"
+            >
               <!-- White Bread -->
               <div
                 class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition"
@@ -237,15 +270,18 @@
                     src="bread-section/white bread.png"
                     alt="White Bread"
                     class="w-full h-full object-cover rounded-lg"
-                />
+                  />
                 </div>
                 <h3
                   class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center"
                 >
                   White Bread
                 </h3>
-                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
-                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                <div
+                  class="flex flex-col sm:flex-row justify-between items-center gap-3"
+                >
+                  <span
+                    class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
                     >2.5$</span
                   >
                   <button
@@ -272,9 +308,13 @@
                 >
                   Wheat Bread
                 </h3>
-                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
-                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
-                    >3$</span>
+                <div
+                  class="flex flex-col sm:flex-row justify-between items-center gap-3"
+                >
+                  <span
+                    class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >3$</span
+                  >
                   <button
                     class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
@@ -298,9 +338,13 @@
                 >
                   Butter Croissant
                 </h3>
-                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
-                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
-                    >4.5$</span>
+                <div
+                  class="flex flex-col sm:flex-row justify-between items-center gap-3"
+                >
+                  <span
+                    class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >4.5$</span
+                  >
                   <button
                     class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
@@ -325,9 +369,13 @@
                 >
                   Multigrain Bread
                 </h3>
-                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
-                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
-                    >3.5$</span>
+                <div
+                  class="flex flex-col sm:flex-row justify-between items-center gap-3"
+                >
+                  <span
+                    class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >3.5$</span
+                  >
                   <button
                     class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
@@ -352,7 +400,9 @@
             >
           </div>
           <div class="flex justify-center">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 w-full">
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 w-full"
+            >
               <!-- Pound Cake -->
               <div
                 class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition"
@@ -369,9 +419,13 @@
                 >
                   Pound Cake
                 </h3>
-                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
-                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
-                    >12$</span>
+                <div
+                  class="flex flex-col sm:flex-row justify-between items-center gap-3"
+                >
+                  <span
+                    class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >12$</span
+                  >
                   <button
                     class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
@@ -395,9 +449,13 @@
                 >
                   Red Velvet Cake
                 </h3>
-                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
-                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
-                    >15$</span>
+                <div
+                  class="flex flex-col sm:flex-row justify-between items-center gap-3"
+                >
+                  <span
+                    class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >15$</span
+                  >
                   <button
                     class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
@@ -422,9 +480,13 @@
                 >
                   Carrot Cake
                 </h3>
-                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
-                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
-                    >14$</span>
+                <div
+                  class="flex flex-col sm:flex-row justify-between items-center gap-3"
+                >
+                  <span
+                    class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >14$</span
+                  >
                   <button
                     class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
@@ -449,9 +511,13 @@
                 >
                   Vanilla Cake
                 </h3>
-                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
-                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
-                    >13$</span>
+                <div
+                  class="flex flex-col sm:flex-row justify-between items-center gap-3"
+                >
+                  <span
+                    class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >13$</span
+                  >
                   <button
                     class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
@@ -475,7 +541,9 @@
             >
           </div>
           <div class="flex justify-center">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 w-full">
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 w-full"
+            >
               <!-- Espresso -->
               <div
                 class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition"
@@ -492,9 +560,13 @@
                 >
                   Espresso
                 </h3>
-                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
-                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
-                    >3$</span>
+                <div
+                  class="flex flex-col sm:flex-row justify-between items-center gap-3"
+                >
+                  <span
+                    class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >3$</span
+                  >
                   <button
                     class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
@@ -519,9 +591,13 @@
                 >
                   Americano
                 </h3>
-                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
-                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
-                    >3.5$</span>
+                <div
+                  class="flex flex-col sm:flex-row justify-between items-center gap-3"
+                >
+                  <span
+                    class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >3.5$</span
+                  >
                   <button
                     class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
@@ -546,9 +622,13 @@
                 >
                   Matcha Latte
                 </h3>
-                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
-                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
-                    >4.5$</span>
+                <div
+                  class="flex flex-col sm:flex-row justify-between items-center gap-3"
+                >
+                  <span
+                    class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >4.5$</span
+                  >
                   <button
                     class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
@@ -572,9 +652,13 @@
                 >
                   Latte
                 </h3>
-                <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
-                  <span class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
-                    >4$</span>
+                <div
+                  class="flex flex-col sm:flex-row justify-between items-center gap-3"
+                >
+                  <span
+                    class="text-red-500 font-semibold text-lg sm:text-xl order-1 sm:order-0"
+                    >4$</span
+                  >
                   <button
                     class="bg-rose-300 hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition w-full sm:w-auto order-2 sm:order-0"
                   >
@@ -674,7 +758,7 @@
             <input type="checkbox" class="sr-only peer" />
             <div
               class="w-11 h-6 bg-gray-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-red-800 after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-red-800 after:border-red-800 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-400"
-            ></>
+            ></div>
           </label>
         </div>
       </div>
