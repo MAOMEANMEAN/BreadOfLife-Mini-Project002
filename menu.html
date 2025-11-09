@@ -6,6 +6,7 @@
     <title>Menu</title>
     <!-- tailwind link -->
     <link rel="stylesheet" href="src/output.css" />
+
     <!-- flowbite link -->
     <link
       href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
@@ -16,23 +17,21 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <style>
-      .btn-card button {
-        transition: all 0.3s ease;
-      }
-      .btn-card button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+    // Enable dark mode using class strategy
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
   </head>
-  <body class="min-h-screen bg-orange-100">
+  <body class="min-h-screen bg-orange-100  text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
     <!-- Header -->
     <header class="sticky top-0 z-50">
-      <div class="bg-orange-100 backdrop-blur-sm pt-10">
+      <div class="bg-orange-100 dark:bg-gray-900 backdrop-blur-sm pt-10">
         <div class="container mx-auto px-3">
           <div
-            class="bg-stone-100/50 backdrop-blur-sm shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl px-4 py-1"
+            class="bg-stone-100/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl px-4 py-1"
           >
             <div class="flex items-center justify-between">
               <!-- Logo -->
@@ -43,7 +42,7 @@
                   class="h-16 w-16 object-contain"
                 />
                 <h1
-                  class="text-xl md:text-2xl font-bold font-serif text-amber-900"
+                  class="text-xl md:text-2xl font-bold font-serif text-amber-900 dark:text-amber-100"
                 >
                   BreadOfLife-Backery
                 </h1>
@@ -52,30 +51,30 @@
               <!-- Search and Icons -->
               <div class="flex items-center space-x-2 md:space-x-4">
                 <!-- Search Bar -->
-                <div class="relative hidden md:block">
-                  <input
-                    type="text"
-                    placeholder="Search"
-                    class="pl-10 pr-4 py-2 border border-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-900 bg-white/80 w-48 lg:w-64 rounded-lg text-lg"
-                  />
-                  <svg
-                    class="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                    ></path>
-                  </svg>
-                </div>
+                <div class="relative">
+                    <input
+                      type="text"
+                      placeholder="Search"
+                      class="pl-14 pr-4 py-2 border border-amber-800 dark:border-amber-100 focus:outline-none focus:ring-2 focus:ring-amber-900 bg-white/80 dark:bg-gray-700 dark:text-white w-64 rounded-lg text-base"
+                    />
+                    <svg
+                      class="w-5 h-5 absolute left-3 top-2.5 text-gray-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      ></path>
+                    </svg>
+                  </div>
 
                 <!-- Cart Icon -->
                 <!-- Cart Icon -->
-                <button id="cart-btn" class="text-amber-900 hover:text-red-700">
+                <button id="cart-btn" class="text-amber-900 dark:text-amber-100 dark:hover:text-red-600 hover:text-red-700" title="Shopping Cart">
                   <svg
                     class="w-7 h-7"
                     fill="none"
@@ -92,7 +91,7 @@
                 </button>
 
                 <!-- User Icon -->
-                <button id="user-btn" class="text-amber-900 hover:text-red-700">
+                <button id="user-btn" class="text-amber-900 dark:text-amber-100 dark:hover:text-red-600 hover:text-red-700" title="User Account" aria-label="User account">
                   <svg
                     class="w-7 h-7"
                     fill="none"
@@ -113,29 +112,29 @@
         </div>
       </div>
       <!-- navbar -->
-      <nav class="bg-orange-100">
-        <div class="container mx-auto px-6">
+      <nav class="bg-orange-100 dark:bg-gray-900 transition-colors duration-300">
+        <div class="container mx-auto px-6 py-1">
           <ul
-            class="flex items-center justify-center space-x-6 md:space-x-12 py-4"
+            class="flex items-center justify-center space-x-8 md:space-x-12 py-4"
           >
             <li>
               <a
                 href="index.html"
-                class="text-amber-900 hover:text-red-700 transition font-semibold text-base md:text-lg"
+                class="text-amber-900 hover:text-red-700 dark:hover:text-red-600 transition font-semibold text-base sm:text-lg dark:text-amber-100"
                 >Home</a
               >
             </li>
             <li>
               <a
                 href="about.html"
-                class="text-amber-900 hover:text-red-700 transition font-semibold text-base md:text-lg"
+                class="text-amber-900 hover:text-red-700 dark:hover:text-red-600 transition font-semibold text-base sm:text-lg dark:text-amber-100"
                 >About us</a
               >
             </li>
             <li class="relative group">
               <a
                 href="menu.html"
-                class="text-amber-900 hover:text-red-700 transition font-semibold text-base md:text-lg flex items-center gap-1"
+                class="text-amber-900 hover:text-red-700 dark:hover:text-red-600 transition font-semibold text-base sm:text-lg dark:text-amber-100 flex items-center gap-1"
               >
                 Menu
                 <svg
@@ -154,27 +153,27 @@
               </a>
               <!-- Dropdown Menu -->
               <div
-                class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-orange-100 shadow-lg border border-amber-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 rounded-sm"
+                class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-orange-100 dark:bg-sky-300 shadow-lg border border-amber-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 rounded-sm dark:text-amber-100"
               >
                 <ul class="py-2">
                   <li>
                     <a
                       href="breads.html"
-                      class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 transition"
+                      class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 dark:hover:bg-sky-200/50 transition dark:text-amber-100"
                       >Breads</a
                     >
                   </li>
                   <li>
                     <a
                       href="cakes.html"
-                      class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 transition"
+                      class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 dark:hover:bg-sky-200/50 transition dark:text-amber-100"
                       >Cakes</a
                     >
                   </li>
                   <li>
                     <a
                       href="drinks.html"
-                      class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 transition"
+                      class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 dark:hover:bg-sky-200/50 transition dark:text-amber-100"
                       >Drinks</a
                     >
                   </li>
@@ -184,7 +183,7 @@
             <li>
               <a
                 href="contact.html"
-                class="text-amber-900 hover:text-red-700 transition font-semibold text-base md:text-lg"
+                class="text-amber-900 hover:text-red-700 dark:hover:text-red-600 transition font-semibold text-base sm:text-lg dark:text-amber-100"
                 >Contact Us</a
               >
             </li>
@@ -201,7 +200,7 @@
       >
         <div>
           <h1
-            class="text-5xl md:text-7xl font-serif text-amber-900 leading-tight"
+            class="text-5xl md:text-7xl font-serif text-amber-900 dark:text-amber-100 leading-tight"
           >
             Where life<br />tastes sweet
           </h1>
@@ -216,32 +215,30 @@
       </div>
       <!--Breads Section  -->
       <section id="breads" class="mb-16">
-        <div class="max-w-[1300px] mx-auto">
+        <div class="max-w-[1080px] mx-auto">
           <div class="flex justify-between items-center mb-6">
-            <h2 class="text-2xl md:text-3xl font-serif text-amber-900">
-              Breads
-            </h2>
+            <h2 class="text-3xl font-serif text-amber-900 dark:text-amber-100">Breads</h2>
             <a
               href="breads.html"
-              class="text-amber-900 hover:text-amber-700 font-medium text-lg md:text-xl font-serif"
+              class="text-amber-900 dark:text-amber-100 hover:text-amber-700 font-medium text-xl font-serif"
               >See More →</a
             >
           </div>
           <div class="flex justify-center">
             <div
-              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10"
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10"
             >
               <!-- White Bread -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
               >
                 <img
                   src="bread-section/white bread.png"
                   alt="White Bread"
-                  class="w-full h-60 object-cover p-2"
+                  class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   White Bread
                 </h3>
@@ -249,9 +246,9 @@
                   <span class="text-red-500 font-semibold text-xl pt-5"
                     >2.5$</span
                   >
-                  <div class="btn-card pt-5">
+                  <div class="pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -261,15 +258,15 @@
 
               <!-- Wheat Bread -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100 mx-auto"
               >
                 <img
                   src="bread-section/whole wheat bread.png"
                   alt="Wheat Bread"
-                  class="w-full h-60 object-cover p-2"
+                  class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Wheat Bread
                 </h3>
@@ -277,9 +274,9 @@
                   <span class="text-red-500 font-semibold text-xl pt-5"
                     >3$</span
                   >
-                  <div class="btn-card pt-5">
+                  <div class="pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -289,15 +286,15 @@
 
               <!-- Butter Croissant -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100 mx-auto"
               >
                 <img
                   src="bread-section/classic butter croosaint.png"
                   alt="Butter Croissant"
-                  class="w-full h-60 object-cover p-2"
+                  class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Butter Croissant
                 </h3>
@@ -305,9 +302,9 @@
                   <span class="text-red-500 font-semibold text-xl pt-5"
                     >4.5$</span
                   >
-                  <div class="btn-card pt-5">
+                  <div class="pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -317,15 +314,15 @@
 
               <!-- Multigrain Bread -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100 mx-auto"
               >
                 <img
                   src="bread-section/multigrain bread.png"
                   alt="Multigrain Bread"
-                  class="w-full h-60 object-cover p-2"
+                  class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Multigrain Bread
                 </h3>
@@ -333,9 +330,9 @@
                   <span class="text-red-500 font-semibold text-xl pt-5"
                     >3.5$</span
                   >
-                  <div class="btn-card pt-5">
+                  <div class="pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -347,33 +344,31 @@
         </div>
       </section>
       <!-- Cakes Section -->
-      <section id="cakes" class="mb-16">
-        <div class="max-w-[1300px] mx-auto">
+      <section id="breads" class="mb-16">
+        <div class="max-w-[1080px] mx-auto">
           <div class="flex justify-between items-center mb-6">
-            <h2 class="text-2xl md:text-3xl font-serif text-amber-900">
-              Cakes
-            </h2>
+            <h2 class="text-3xl font-serif text-amber-900 dark:text-amber-100">Cakes</h2>
             <a
               href="cakes.html"
-              class="text-amber-900 hover:text-amber-700 font-medium text-lg md:text-xl font-serif"
+              class="text-amber-900 dark:text-amber-100 hover:text-amber-700 font-medium text-xl font-serif"
               >See More →</a
             >
           </div>
           <div class="flex justify-center">
             <div
-              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10"
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10"
             >
               <!-- Pound Cake -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100 mx-auto"
               >
                 <img
                   src="cake-section/pound cake.png"
                   alt="Pound Cake"
-                  class="w-full h-60 object-cover p-2"
+                  class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Pound Cake
                 </h3>
@@ -381,9 +376,9 @@
                   <span class="text-red-500 font-semibold text-xl pt-5"
                     >12$</span
                   >
-                  <div class="btn-card pt-5">
+                  <div class="pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -393,15 +388,15 @@
 
               <!-- Red Velvet Cake -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100 mx-auto"
               >
                 <img
                   src="cake-section/red velvet cake.png"
                   alt="Red Velvet Cake"
-                  class="w-full h-60 object-cover p-2"
+                  class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Red Velvet Cake
                 </h3>
@@ -409,9 +404,9 @@
                   <span class="text-red-500 font-semibold text-xl pt-5"
                     >15$</span
                   >
-                  <div class="btn-card pt-5">
+                  <div class="pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -421,15 +416,15 @@
 
               <!-- Carrot Cake -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100 mx-auto"
               >
                 <img
                   src="cake-section/carrot cake.png"
                   alt="Carrot Cake"
-                  class="w-full h-60 object-cover p-2"
+                  class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Carrot Cake
                 </h3>
@@ -437,9 +432,9 @@
                   <span class="text-red-500 font-semibold text-xl pt-5"
                     >14$</span
                   >
-                  <div class="btn-card pt-5">
+                  <div class="pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -449,15 +444,15 @@
 
               <!-- Vanilla Cake -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100 mx-auto"
               >
                 <img
                   src="cake-section/vanilla cake.png"
                   alt="Vanilla Cake"
-                  class="w-full h-60 object-cover p-2"
+                  class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Vanilla Cake
                 </h3>
@@ -465,9 +460,9 @@
                   <span class="text-red-500 font-semibold text-xl pt-5"
                     >13$</span
                   >
-                  <div class="btn-card pt-5">
+                  <div class="pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -480,33 +475,31 @@
       </section>
 
       <!-- Drinks Section -->
-      <section id="drinks" class="mb-16">
-        <div class="max-w-[1300px] mx-auto">
+      <section id="breads" class="mb-16">
+        <div class="max-w-[1080px] mx-auto">
           <div class="flex justify-between items-center mb-6">
-            <h2 class="text-2xl md:text-3xl font-serif text-amber-900">
-              Drinks
-            </h2>
+            <h2 class="text-3xl font-serif text-amber-900 dark:text-amber-100">Drinks</h2>
             <a
               href="drinks.html"
-              class="text-amber-900 hover:text-amber-700 font-medium text-lg md:text-xl font-serif"
+              class="text-amber-900 dark:text-amber-100 hover:text-amber-700 font-medium text-xl font-serif"
               >See More →</a
             >
           </div>
           <div class="flex justify-center">
             <div
-              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10"
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10"
             >
               <!-- Espresso -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100 mx-auto"
               >
                 <img
                   src="drink-section/espresso.png"
                   alt="Espresso"
-                  class="w-full h-60 object-cover p-2"
+                  class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Espresso
                 </h3>
@@ -514,9 +507,9 @@
                   <span class="text-red-500 font-semibold text-xl pt-5"
                     >3$</span
                   >
-                  <div class="btn-card pt-5">
+                  <div class="pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -526,15 +519,15 @@
 
               <!-- Americano -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100 mx-auto"
               >
                 <img
                   src="drink-section/americano.png"
                   alt="Americano"
-                  class="w-full h-60 object-cover p-2"
+                  class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Americano
                 </h3>
@@ -542,9 +535,9 @@
                   <span class="text-red-500 font-semibold text-xl pt-5"
                     >3.5$</span
                   >
-                  <div class="btn-card pt-5">
+                  <div class="pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -554,15 +547,15 @@
 
               <!-- Matcha Latte -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100 mx-auto"
               >
                 <img
                   src="drink-section/matcha latte.png"
                   alt="Matcha Latte"
-                  class="w-full h-60 object-cover p-2"
+                  class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Matcha Latte
                 </h3>
@@ -570,26 +563,27 @@
                   <span class="text-red-500 font-semibold text-xl pt-5"
                     >4.5$</span
                   >
-                  <div class="btn-card pt-5">
+                  <div class="pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
                   </div>
                 </div>
               </div>
+
               <!-- Latte -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-full max-w-[260px] mx-auto"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100 mx-auto"
               >
                 <img
                   src="drink-section/latte.png"
                   alt="Latte"
-                  class="w-full h-60 object-cover p-2"
+                  class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Latte
                 </h3>
@@ -597,9 +591,9 @@
                   <span class="text-red-500 font-semibold text-xl pt-5"
                     >4$</span
                   >
-                  <div class="btn-card pt-5">
+                  <div class="pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -612,7 +606,7 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer class="bg-rose-300/50 py-12 mt-16">
+    <footer class="bg-rose-300/50 dark:bg-sky-300/50 py-12 mt-16">
       <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           <!-- Column 1 -->
@@ -703,22 +697,40 @@
         </div>
 
         <!-- Dark Mode Toggle -->
-        <div class="mt-8 flex items-center gap-3">
-          <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" class="sr-only peer" id="darkModeToggle" />
-            <div
-              class="w-11 h-6 bg-gray-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-red-800 after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-red-800 after:border-red-800 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-400"
-            ></div>
-          </label>
-          <span class="text-amber-900 font-medium">
-            <i class="fas fa-moon" id="modeIcon"></i>
-            <span id="modeText">Dark Mode</span>
-          </span>
-        </div>
+       <div class="mt-8 flex">
+    <label class="relative inline-flex items-center cursor-pointer">
+      <input id="theme-toggle" type="checkbox" class="sr-only peer">
+      <div
+        class="w-12 h-6 bg-gray-300 peer-focus:outline-none rounded-full peer peer-checked:bg-gray-700
+        after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300
+        after:border after:rounded-full after:h-5 after:w-3 after:transition-all peer-checked:after:translate-x-full
+        peer-checked:after:border-white">
       </div>
+      
+    </label>
+  </div>
     </footer>
+      <!-- mode -->
+      <script>
+          const toggleBtn = document.getElementById('theme-toggle');
+          const html = document.documentElement;
+
+          // Load saved theme
+          if (localStorage.getItem('theme') === 'dark') {
+            html.classList.add('dark');
+          } else {
+            html.classList.remove('dark');
+          }
+
+          // Toggle on click
+          toggleBtn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+          });
+  </script>
     <!-- script -->
     <script src="js/script.js"></script>
+    <script src="js/spaghetti.js"></script>
     <!-- flowbite script -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
   </body>

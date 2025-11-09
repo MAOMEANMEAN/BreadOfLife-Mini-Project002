@@ -19,13 +19,20 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+     <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+    // Enable dark mode using class strategy
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
   </head>
-  <body class="min-h-screen bg-orange-100">
+  <body class="min-h-screen bg-orange-100  text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
     <!-- Back Button -->
     <div class="container mx-auto px-6 pt-8">
       <a
         href="menu.html"
-        class="inline-flex items-center text-amber-900 hover:text-red-700 font-semibold text-2xl transition font-serif"
+        class="inline-flex items-center text-amber-900 dark:text-amber-100 dark:hover:text-red-600 hover:text-red-700 font-semibold text-2xl transition font-serif"
       >
         <svg
           class="w-5 h-5 mr-2"
@@ -52,7 +59,7 @@
       >
         <div>
           <h1
-            class="text-7xl md:text-8xl font-serif text-amber-900 leading-tight"
+            class="text-7xl md:text-8xl font-serif text-amber-900 dark:text-amber-100 leading-tight"
           >
             Liquid<br />Comfort
           </h1>
@@ -68,7 +75,7 @@
 
       <!-- Welcome Section -->
       <div class="text-center mb-12">
-        <h2 class="text-4xl font-serif text-amber-900 mb-4">
+        <h2 class="text-4xl font-serif text-amber-900 dark:text-amber-100 mb-4">
           Welcome to Drinks Section!
         </h2>
       </div>
@@ -82,7 +89,7 @@
             >
               <!-- Espresso -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
               >
                 <img
                   src="drink-section/espresso.png"
@@ -90,7 +97,7 @@
                   class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Espresso
                 </h3>
@@ -100,7 +107,7 @@
                   >
                   <div class="btn-card pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -110,7 +117,7 @@
 
               <!-- Americano -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
               >
                 <img
                   src="drink-section/americano.png"
@@ -118,7 +125,7 @@
                   class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Americano
                 </h3>
@@ -128,7 +135,7 @@
                   >
                   <div class="btn-card pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -138,7 +145,7 @@
 
               <!-- Matcha Latte -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
               >
                 <img
                   src="drink-section/matcha latte.png"
@@ -146,7 +153,7 @@
                   class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Matcha Latte
                 </h3>
@@ -156,7 +163,7 @@
                   >
                   <div class="btn-card pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -166,7 +173,7 @@
 
               <!-- Latte -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
               >
                 <img
                   src="drink-section/latte.png"
@@ -174,7 +181,7 @@
                   class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Latte
                 </h3>
@@ -184,7 +191,7 @@
                   >
                   <div class="btn-card pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -194,7 +201,7 @@
 
               <!-- Mocha -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
               >
                 <img
                   src="drink-section/mocha.png"
@@ -202,7 +209,7 @@
                   class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Mocha
                 </h3>
@@ -212,7 +219,7 @@
                   >
                   <div class="btn-card pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -222,7 +229,7 @@
 
               <!-- Milk Tea -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
               >
                 <img
                   src="drink-section/milktea.png"
@@ -230,7 +237,7 @@
                   class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Milk Tea
                 </h3>
@@ -240,7 +247,7 @@
                   >
                   <div class="btn-card pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -250,7 +257,7 @@
 
               <!-- Fruit Smoothie -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
               >
                 <img
                   src="drink-section/fruit smooties.png"
@@ -258,7 +265,7 @@
                   class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Fruit Smoothie
                 </h3>
@@ -268,7 +275,7 @@
                   >
                   <div class="btn-card pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -278,7 +285,7 @@
 
               <!-- Lemonade -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
               >
                 <img
                   src="drink-section/lemonade.png"
@@ -286,7 +293,7 @@
                   class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Lemonade
                 </h3>
@@ -296,7 +303,7 @@
                   >
                   <div class="btn-card pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -306,7 +313,7 @@
 
               <!-- Milkshake -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
               >
                 <img
                   src="drink-section/milkshake.png"
@@ -314,7 +321,7 @@
                   class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Milkshake
                 </h3>
@@ -324,7 +331,7 @@
                   >
                   <div class="btn-card pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -334,7 +341,7 @@
 
               <!-- Water -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
               >
                 <img
                   src="drink-section/Water.png"
@@ -342,7 +349,7 @@
                   class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Water
                 </h3>
@@ -352,7 +359,7 @@
                   >
                   <div class="btn-card pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -362,7 +369,7 @@
 
               <!-- Tea -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
               >
                 <img
                   src="drink-section/Tea.png"
@@ -370,7 +377,7 @@
                   class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Tea
                 </h3>
@@ -380,7 +387,7 @@
                   >
                   <div class="btn-card pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -390,7 +397,7 @@
 
               <!-- Juice -->
               <div
-                class="bg-rose-200/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
+                class="bg-rose-200/50 dark:bg-sky-300/50 rounded-2xl p-4 shadow-md hover:shadow-xl transition w-60 h-100"
               >
                 <img
                   src="drink-section/juices.png"
@@ -398,7 +405,7 @@
                   class="w-60 h-60 object-cover p-2"
                 />
                 <h3
-                  class="text-amber-900 font-medium text-2xl font-serif mb-2 pt-3 text-center"
+                  class="text-amber-900 font-medium text-lg sm:text-xl md:text-2xl font-serif mb-4 text-center dark:text-amber-200"
                 >
                   Juice
                 </h3>
@@ -408,7 +415,7 @@
                   >
                   <div class="btn-card pt-5">
                     <button
-                      class="bg-rose-300 hover:bg-white text-black text-lg px-4 py-1 rounded-full transition"
+                      class="bg-rose-300 dark:bg-rose-400 dark:hover:bg-white hover:bg-white text-black text-base sm:text-lg px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:scale-105"
                     >
                       Add to cart
                     </button>
@@ -422,7 +429,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-rose-300/50 py-12 mt-16">
+    <footer class="bg-rose-300/50 dark:bg-sky-300/50 py-12 mt-16">
       <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <!-- Column 1 -->
@@ -512,17 +519,39 @@
 
         <!-- Dark Mode Toggle -->
         <div class="mt-8 flex">
-          <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" class="sr-only peer" />
-            <div
-              class="w-11 h-6 bg-gray-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-red-800 after:content-[''] after:absolute after:top-0.5fafter:left-0.5fter:bg-red-800 after:border-red-800 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-400"
-            ></div>
-          </label>
-        </div>
+    <label class="relative inline-flex items-center cursor-pointer">
+      <input id="theme-toggle" type="checkbox" class="sr-only peer">
+      <div
+        class="w-12 h-6 bg-gray-300 peer-focus:outline-none rounded-full peer peer-checked:bg-gray-700
+        after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300
+        after:border after:rounded-full after:h-5 after:w-3 after:transition-all peer-checked:after:translate-x-full
+        peer-checked:after:border-white">
       </div>
+      
+    </label>
+    </div>
     </footer>
+          <!-- mode -->
+      <script>
+          const toggleBtn = document.getElementById('theme-toggle');
+          const html = document.documentElement;
+
+          // Load saved theme
+          if (localStorage.getItem('theme') === 'dark') {
+            html.classList.add('dark');
+          } else {
+            html.classList.remove('dark');
+          }
+
+          // Toggle on click
+          toggleBtn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+          });
+  </script>
     <!-- script -->
     <script src="js/script.js"></script>
+    <script src="js/spaghetti.js"></script>
     <!-- Flowbite Script -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
   </body>

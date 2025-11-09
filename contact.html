@@ -19,14 +19,21 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+     <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+    // Enable dark mode using class strategy
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
   </head>
-  <body class="min-h-screen bg-orange-100">
+  <body class="min-h-screen bg-orange-100  text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
     <!-- Header -->
     <header class="sticky top-0 z-50">
-      <div class="bg-orange-100 backdrop-blur-sm pt-10">
+      <div class="bg-orange-100 dark:bg-gray-900 backdrop-blur-sm pt-10">
         <div class="container mx-auto px-3">
           <div
-            class="bg-stone-100/50 backdrop-blur-sm shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl px-4 py-1"
+            class="bg-stone-100/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl px-4 py-1"
           >
             <div class="flex items-center justify-between">
               <!-- Logo -->
@@ -36,7 +43,7 @@
                   alt="BreadOfLife-logo"
                   class="h-16 w-16 object-contain"
                 />
-                <h1 class="text-2xl font-bold font-serif text-amber-900">
+                <h1 class="text-2xl font-bold font-serif text-amber-900 dark:text-amber-100">
                   BreadOfLife-Backery
                 </h1>
               </div>
@@ -45,29 +52,28 @@
               <div class="flex items-center space-x-4">
                 <!-- Search Bar -->
                 <div class="relative">
-                  <input
-                    type="text"
-                    placeholder="Search"
-                    class="pl-13 pr-4 py-2 border border-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-900 bg-white/80 w-64 rounded-lg text-lg"
-                  />
-                  <svg
-                    class="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                    ></path>
-                  </svg>
-                </div>
+                    <input
+                      type="text"
+                      placeholder="Search"
+                      class="pl-14 pr-4 py-2 border border-amber-800 dark:border-amber-100 focus:outline-none focus:ring-2 focus:ring-amber-900 bg-white/80 dark:bg-gray-700 dark:text-white w-64 rounded-lg text-base"
+                    />
+                    <svg
+                      class="w-5 h-5 absolute left-3 top-2.5 text-gray-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      ></path>
+                    </svg>
+                  </div>
 
                 <!-- Cart Icon -->
-                <!-- Cart Icon -->
-                <button id="cart-btn" class="text-amber-900 hover:text-red-700">
+                <button id="cart-btn" class="text-amber-900 dark:text-amber-100 dark:hover:text-red-600 hover:text-red-700" title="Shopping Cart">
                   <svg
                     class="w-7 h-7"
                     fill="none"
@@ -84,7 +90,8 @@
                 </button>
 
                 <!-- User Icon -->
-                <button id="user-btn" class="text-amber-900 hover:text-red-700">
+                <button id="user-btn" class="text-amber-900 dark:text-amber-100 dark:hover:text-red-600 hover:text-red-700" title="User Account" aria-label="User account">
+                  <span class="sr-only">User account</span>
                   <svg
                     class="w-7 h-7"
                     fill="none"
@@ -105,26 +112,26 @@
         </div>
       </div>
       <!-- navbar -->
-      <nav class="bg-orange-100">
-        <div class="container mx-auto px-6">
-          <ul class="flex items-center justify-center space-x-12 py-4">
+      <nav class="bg-orange-100 dark:bg-gray-900 transition-colors duration-300">
+        <div class="container mx-auto px-6 py-1">
+          <ul class="flex items-center justify-center space-x-8 md:space-x-12 py-4">
             <li>
               <a
                 href="index.html"
-                class="text-amber-900 hover:text-red-700 transition font-semibold text-lg"
+                class="text-amber-900 hover:text-red-700 dark:hover:text-red-600 transition font-semibold text-base sm:text-lg dark:text-amber-100"
                 >Home</a
               >
             </li>
             <li>
               <a
                 href="about.html"
-                class="text-amber-900 hover:text-red-700 transition font-semibold text-lg"
+                class="text-amber-900 hover:text-red-700 dark:hover:text-red-600 transition font-semibold text-base sm:text-lg dark:text-amber-100"
                 >About us</a
               >
             </li>
             <li class="relative group">
               <button
-                class="text-amber-900 hover:text-red-700 transition font-semibold text-lg flex items-center gap-1"
+                class="text-amber-900 hover:text-red-700 dark:hover:text-red-600 transition font-semibold text-base sm:text-lg dark:text-amber-100 flex items-center gap-1"
               >
                 Menu
                 <svg
@@ -143,27 +150,27 @@
               </button>
               <!-- Dropdown Menu -->
               <div
-                class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-orange-100 shadow-lg border border-amber-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 rounded-sm"
+                class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-orange-100 dark:bg-sky-300 shadow-lg border border-amber-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 rounded-sm dark:text-amber-100"
               >
                 <ul class="py-2">
                   <li>
                     <a
                       href="breads.html"
-                      class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 transition"
+                      class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 dark:hover:bg-sky-200/50 transition dark:text-amber-100"
                       >Breads</a
                     >
                   </li>
                   <li>
                     <a
                       href="cakes.html"
-                      class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 transition"
+                      class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 dark:hover:bg-sky-200/50 transition dark:text-amber-100"
                       >Cakes</a
                     >
                   </li>
                   <li>
                     <a
                       href="drinks.html"
-                      class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 transition"
+                      class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 dark:hover:bg-sky-200/50 transition dark:text-amber-100"
                       >Drinks</a
                     >
                   </li>
@@ -173,7 +180,7 @@
             <li>
               <a
                 href="contact.html"
-                class="text-amber-900 hover:text-red-700 transition font-semibold text-lg"
+                class="text-amber-900 hover:text-red-700 dark:hover:text-red-600 transition font-semibold text-base sm:text-lg dark:text-amber-100"
                 >Contact Us</a
               >
             </li>
@@ -182,11 +189,10 @@
       </nav>
     </header>
 
-    <!-- Main Content -->
+    <!-- Main -->
     <main class="container mx-auto px-6 py-8">
       <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Left Side - Images -->
           <div class="flex flex-col justify-center space-y-8">
             <!-- Coffee Image -->
             <div class="flex justify-center">
@@ -205,10 +211,8 @@
               />
             </div>
           </div>
-
-          <!-- Right Side - Contact Form -->
-          <div class="bg-rose-200/40 rounded-3xl p-8">
-            <h1 class="text-4xl font-serif text-amber-900 mb-8 text-center">
+          <div class="bg-rose-200/40 dark:bg-sky-200/40 rounded-3xl p-8">
+            <h1 class="text-4xl font-serif text-amber-900 dark:text-amber-100 mb-8 text-center">
               Contact Us
             </h1>
 
@@ -218,7 +222,7 @@
                 <input
                   type="text"
                   placeholder="Your name"
-                  class="w-full px-4 py-3 rounded-lg border-2 border-rose-300 focus:outline-none focus:border-amber-900 bg-white/80"
+                  class="w-full px-4 py-3 rounded-lg border-2 border-rose-300 dark:border-sky-300 focus:outline-none focus:border-amber-900 bg-white/80"
                 />
               </div>
 
@@ -227,7 +231,7 @@
                 <input
                   type="email"
                   placeholder="Your email"
-                  class="w-full px-4 py-3 rounded-lg border-2 border-rose-300 focus:outline-none focus:border-amber-900 bg-white/80"
+                  class="w-full px-4 py-3 rounded-lg border-2 border-rose-300 dark:border-sky-300 focus:outline-none focus:border-amber-900 bg-white/80"
                 />
               </div>
 
@@ -236,7 +240,7 @@
                 <input
                   type="tel"
                   placeholder="Your phone (optional)"
-                  class="w-full px-4 py-3 rounded-lg border-2 border-rose-300 focus:outline-none focus:border-amber-900 bg-white/80"
+                  class="w-full px-4 py-3 rounded-lg border-2 border-rose-300 dark:border-sky-300 focus:outline-none focus:border-amber-900 bg-white/80"
                 />
               </div>
 
@@ -245,7 +249,7 @@
                 <textarea
                   placeholder="Your message"
                   rows="5"
-                  class="w-full px-4 py-3 rounded-lg border-2 border-rose-300 focus:outline-none focus:border-amber-900 bg-white/80 resize-none"
+                  class="w-full px-4 py-3 rounded-lg border-2 border-rose-300 dark:border-sky-300 focus:outline-none focus:border-amber-900 bg-white/80 resize-none"
                 ></textarea>
               </div>
 
@@ -261,7 +265,7 @@
             </form>
 
             <!-- Contact Information -->
-            <div class="mt-8 space-y-3 text-amber-900">
+            <div class="mt-8 space-y-3 text-amber-900 dark:text-amber-100">
               <div class="flex items-center justify-center gap-2">
                 <svg
                   class="w-5 h-5"
@@ -323,7 +327,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-rose-300/50 py-12 mt-16">
+    <footer class="bg-rose-300/50 dark:bg-sky-300/50 py-12 mt-16">
       <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <!-- Column 1 -->
@@ -413,17 +417,38 @@
 
         <!-- Dark Mode Toggle -->
         <div class="mt-8 flex">
-          <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" class="sr-only peer" />
-            <div
-              class="w-11 h-6 bg-gray-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-red-800 after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-red-800 after:border-red-800 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-400"
-            ></div>
-          </label>
-        </div>
+    <label class="relative inline-flex items-center cursor-pointer">
+      <input id="theme-toggle" type="checkbox" class="sr-only peer">
+      <div
+        class="w-12 h-6 bg-gray-300 peer-focus:outline-none rounded-full peer peer-checked:bg-gray-700
+        after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300
+        after:border after:rounded-full after:h-5 after:w-3 after:transition-all peer-checked:after:translate-x-full
+        peer-checked:after:border-white">
       </div>
+    </label>
+  </div>
     </footer>
+       <!-- mode -->
+      <script>
+          const toggleBtn = document.getElementById('theme-toggle');
+          const html = document.documentElement;
+
+          // Load saved theme
+          if (localStorage.getItem('theme') === 'dark') {
+            html.classList.add('dark');
+          } else {
+            html.classList.remove('dark');
+          }
+
+          // Toggle on click
+          toggleBtn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+          });
+  </script>
     <!-- script -->
     <script src="js/script.js"></script>
+    <script src="js/spaghetti.js"></script>
     <!-- flowbite script -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
   </body>

@@ -19,14 +19,21 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+    // Enable dark mode using class strategy
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
   </head>
-  <body class="min-h-screen bg-orange-100">
+  <body class="min-h-screen bg-orange-100  text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 ">
     <!-- Header -->
     <header class="sticky top-0 z-50">
-      <div class="bg-orange-100 backdrop-blur-sm pt-10">
+      <div class="bg-orange-100 dark:bg-gray-900 backdrop-blur-sm pt-10"">
         <div class="container mx-auto px-3">
           <div
-            class="bg-stone-100/50 backdrop-blur-sm shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl px-4 py-1"
+            class="bg-stone-100/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl px-4 py-1"
           >
             <div class="flex items-center justify-between">
               <!-- Logo -->
@@ -36,7 +43,7 @@
                   alt="BreadOfLife-logo"
                   class="h-16 w-16 object-contain"
                 />
-                <h1 class="text-2xl font-bold font-serif text-amber-900">
+                <h1 class="text-2xl font-bold font-serif text-amber-900 dark:text-amber-100">
                   BreadOfLife-Backery
                 </h1>
               </div>
@@ -45,29 +52,28 @@
               <div class="flex items-center space-x-4">
                 <!-- Search Bar -->
                 <div class="relative">
-                  <input
-                    type="text"
-                    placeholder="Search"
-                    class="pl-13 pr-4 py-2 border border-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-900 bg-white/80 w-64 rounded-lg text-lg"
-                  />
-                  <svg
-                    class="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                    ></path>
-                  </svg>
-                </div>
+                    <input
+                      type="text"
+                      placeholder="Search"
+                      class="pl-14 pr-4 py-2 border border-amber-800 dark:border-amber-100 focus:outline-none focus:ring-2 focus:ring-amber-900 bg-white/80 dark:bg-gray-700 dark:text-white w-64 rounded-lg text-base"
+                    />
+                    <svg
+                      class="w-5 h-5 absolute left-3 top-2.5 text-gray-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      ></path>
+                    </svg>
+                  </div>
 
                 <!-- Cart Icon -->
-                <!-- Cart Icon -->
-                <button id="cart-btn" class="text-amber-900 hover:text-red-700">
+                <button id="cart-btn" class="text-amber-900 dark:text-amber-100 dark:hover:text-red-600 hover:text-red-700" title="Shopping Cart">
                   <svg
                     class="w-7 h-7"
                     fill="none"
@@ -84,7 +90,8 @@
                 </button>
 
                 <!-- User Icon -->
-                <button id="user-btn" class="text-amber-900 hover:text-red-700">
+                <button id="user-btn" class="text-amber-900 dark:text-amber-100 dark:hover:text-red-600 hover:text-red-700" title="User Account" aria-label="User account">
+                  <span class="sr-only">User account</span>
                   <svg
                     class="w-7 h-7"
                     fill="none"
@@ -105,26 +112,26 @@
         </div>
       </div>
       <!-- navbar -->
-      <nav class="bg-orange-100">
+      <nav class="bg-orange-100 dark:bg-gray-900 transition-colors duration-300">
         <div class="container mx-auto px-6">
-          <ul class="flex items-center justify-center space-x-12 py-4">
+          <ul class="flex items-center justify-center space-x-8 md:space-x-12 py-4">
             <li>
               <a
                 href="index.html"
-                class="text-amber-900 hover:text-red-700 transition font-semibold text-lg"
+                class="text-amber-900 hover:text-red-700 dark:hover:text-red-600 transition font-semibold text-base sm:text-lg dark:text-amber-100"
                 >Home</a
               >
             </li>
             <li>
               <a
                 href="about.html"
-                class="text-amber-900 hover:text-red-700 transition font-semibold text-lg"
+                class="text-amber-900 hover:text-red-700 dark:hover:text-red-600 transition font-semibold text-base sm:text-lg dark:text-amber-100"
                 >About us</a
               >
             </li>
             <li class="relative group">
               <button
-                class="text-amber-900 hover:text-red-700 transition font-semibold text-lg flex items-center gap-1"
+                class="text-amber-900 hover:text-red-700 dark:hover:text-red-600 transition font-semibold text-lg flex items-center gap-1 dark:text-amber-100"
               >
                 Menu
                 <svg
@@ -143,27 +150,27 @@
               </button>
               <!-- Dropdown Menu -->
               <div
-                class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-orange-100 shadow-lg border border-amber-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 rounded-sm"
+                class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-orange-100 dark:bg-sky-300 shadow-lg border border-amber-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 rounded-sm dark:text-amber-100"
               >
                 <ul class="py-2">
                   <li>
                     <a
                       href="breads.html"
-                      class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 transition"
+                      class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 dark:hover:bg-sky-200/50 transition dark:text-amber-100"
                       >Breads</a
                     >
                   </li>
                   <li>
                     <a
                       href="cakes.html"
-                      class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 transition"
+                      class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 dark:hover:bg-sky-200/50 transition dark:text-amber-100"
                       >Cakes</a
                     >
                   </li>
                   <li>
                     <a
                       href="drinks.html"
-                      class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 transition"
+                      class="block px-4 py-2 text-amber-900 font-semibold hover:bg-rose-200 dark:hover:bg-sky-200/50 transition dark:text-amber-100"
                       >Drinks</a
                     >
                   </li>
@@ -173,7 +180,7 @@
             <li>
               <a
                 href="contact.html"
-                class="text-amber-900 hover:text-red-700 transition font-semibold text-lg"
+                class="text-amber-900 hover:text-red-700 dark:hover:text-red-600 transition font-semibold text-base sm:text-lg dark:text-amber-100"
                 >Contact Us</a
               >
             </li>
@@ -198,7 +205,7 @@
           class="relative h-full flex items-center justify-start px-12 md:px-24"
         >
           <div class="text-left text-white px-12 py-10 bg-black/40 max-w-4xl">
-            <h1 class="text-6xl md:text-8xl font-serif leading-tight">
+            <h1 class="text-6xl md:text-7xl font-serif leading-tight">
               Baked with love,<br />
               served with a smile<br />
               where every bite<br />
@@ -213,12 +220,12 @@
         <section class="mb-16">
           <div class="max-w-4xl mx-auto">
             <div class="p-12">
-              <h2 class="text-5xl font-serif text-amber-900 text-center mb-8">
+              <h2 class="text-5xl font-serif text-amber-900 dark:text-amber-100 text-center mb-8">
                 Our Sweet<br />Journey
               </h2>
 
-              <div class="space-y-6 text-amber-900">
-                <div class="bg-rose-300/30 rounded-2xl p-6">
+              <div class="space-y-6 text-amber-900 dark:text-amber-100">
+                <div class="bg-rose-300/30 dark:bg-sky-300/30 rounded-2xl p-6">
                   <p class="text-xl leading-relaxed text-center font-serif">
                     Bread of Life began, not just as a bakery, but as a vision—a
                     place where every loaf tells a story, and every pastry
@@ -231,7 +238,7 @@
                   </p>
                 </div>
 
-                <div class="bg-rose-300/30 rounded-2xl p-6">
+                <div class="bg-rose-300/30 dark:bg-sky-300/30 rounded-2xl p-6">
                   <p class="text-xl leading-relaxed text-center font-serif">
                     We believe that life, like baking, is a delicate balance of
                     warmth, patience, and care. From sunrise sourdough to sunset
@@ -252,9 +259,9 @@
             alt="wheat"
             class="w-30 h-30 object-contain"
           />
-          <div class="bg-rose-300/30 rounded-2xl p-4 w-150 h-20">
+          <div class="bg-rose-300/30 dark:bg-sky-300/30 rounded-2xl p-4 w-150 h-20">
             <p
-              class="text-xl font-serif text-amber-900 mx-6 italic text-center"
+              class="text-xl font-serif text-amber-900 dark:text-amber-100 mx-6 italic text-center"
             >
               This is our journey. And we're so glad you're part of it.
             </p>
@@ -269,7 +276,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-rose-300/50 py-12 mt-16">
+    <footer class="bg-rose-300/50 dark:bg-sky-300/50 py-12 mt-16">
       <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <!-- Column 1 -->
@@ -358,18 +365,22 @@
         </div>
 
         <!-- Dark Mode Toggle -->
-        <div class="mt-8 flex">
-          <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" class="sr-only peer" />
-            <div
-              class="w-11 h-6 bg-gray-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-red-800 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-red-800 after:border-red-800 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-400"
-            ></div>
-          </label>
-        </div>
+      <div class="mt-8 flex">
+      <label class="relative inline-flex items-center cursor-pointer">
+      <input id="theme-toggle" type="checkbox" class="sr-only peer" title="Toggle dark mode" aria-label="Toggle dark mode" name="theme-toggle">
+      <div
+        class="w-12 h-6 bg-gray-300 peer-focus:outline-none rounded-full peer peer-checked:bg-gray-700
+        after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300
+        after:border after:rounded-full after:h-5 after:w-3 after:transition-all peer-checked:after:translate-x-full
+        peer-checked:after:border-white">
       </div>
+      
+    </label>
+     </div>
     </footer>
     <!-- script -->
     <script src="js/script.js"></script>
+    <script src="js/spaghetti.js"></script>
     <!-- flowbite script -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
   </body>
